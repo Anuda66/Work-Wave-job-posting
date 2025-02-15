@@ -61,7 +61,14 @@ function Nav() {
                     onClick={() => navigate("/myAppoiment")}
                     className="cursor-pointer hover:text-black"
                   >
-                    My Appointment
+                    Applied Job
+                  </p>
+                  <hr />
+                  <p
+                    onClick={() => navigate("/cvformat")}
+                    className="cursor-pointer hover:text-black"
+                  >
+                    CV Format
                   </p>
                   <hr />
                   <p

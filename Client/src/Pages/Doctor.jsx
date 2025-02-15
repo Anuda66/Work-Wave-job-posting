@@ -23,7 +23,7 @@ function Doctor() {
 
   return (
     <div>
-      <p className="text-gray-600">Browse through the doctors specialist.</p>
+      <p className="text-gray-600">Browse through the Job specialist.</p>
       <div className="flex flex-col gap-4 mt-10 items-s tart sm:flex-row">
         <div className="flex flex-col gap-4 text-sm text-gray-600">
           <p
@@ -32,9 +32,9 @@ function Doctor() {
                 ? navigate("/doctor")
                 : navigate("/doctor/General physician")
             }
-            className={`w-[94vw] sm:w-auto pl-3 py-1.5 pr-16 border border-gray-300 rounded transition-all cursor-pointer hover:bg-green-500 hover:text-white  duration-500`}
+            className={`w-[94vw] sm:w-auto pl-3 py-1.5 pr-16 border border-gray-300 rounded transition-all cursor-pointer hover:bg-purple-800 hover:text-white  duration-500`}
           >
-            General physician
+            QA Engineer
           </p>
           <p
             onClick={() =>
@@ -42,9 +42,9 @@ function Doctor() {
                 ? navigate("/doctor")
                 : navigate("/doctor/Gynecologist")
             }
-            className={`w-[94vw] sm:w-auto pl-3 py-1.5 pr-16 border border-gray-300 rounded transition-all cursor-pointer hover:bg-green-500 hover:text-white  duration-500`}
+            className={`w-[94vw] sm:w-auto pl-3 py-1.5 pr-16 border border-gray-300 rounded transition-all cursor-pointer hover:bg-purple-800 hover:text-white  duration-500`}
           >
-            Gynecologist
+            Front-End Engineer
           </p>
           <p
             onClick={() =>
@@ -52,9 +52,9 @@ function Doctor() {
                 ? navigate("/doctor")
                 : navigate("/doctor/Dermatologist")
             }
-            className={`w-[94vw] sm:w-auto pl-3 py-1.5 pr-16 border border-gray-300 rounded transition-all cursor-pointer hover:bg-green-500 hover:text-white  duration-500`}
+            className={`w-[94vw] sm:w-auto pl-3 py-1.5 pr-16 border border-gray-300 rounded transition-all cursor-pointer hover:bg-purple-800 hover:text-white  duration-500`}
           >
-            Dermatologist
+           Back-End Engineer
           </p>
           <p
             onClick={() =>
@@ -62,9 +62,9 @@ function Doctor() {
                 ? navigate("/doctor")
                 : navigate("/doctor/Pediatricians")
             }
-            className={`w-[94vw] sm:w-auto pl-3 py-1.5 pr-16 border border-gray-300 rounded transition-all cursor-pointer hover:bg-green-500 hover:text-white  duration-500`}
+            className={`w-[94vw] sm:w-auto pl-3 py-1.5 pr-16 border border-gray-300 rounded transition-all cursor-pointer hover:bg-purple-800 hover:text-white  duration-500`}
           >
-            Pediatricians
+            Full Stack Engineer
           </p>
           <p
             onClick={() =>
@@ -72,28 +72,26 @@ function Doctor() {
                 ? navigate("/doctor")
                 : navigate("/doctor/Neurologist")
             }
-            className={`w-[94vw] sm:w-auto pl-3 py-1.5 pr-16 border border-gray-300 rounded transition-all cursor-pointer hover:bg-green-500 hover:text-white  duration-500`}
+            className={`w-[94vw] sm:w-auto pl-3 py-1.5 pr-16 border border-gray-300 rounded transition-all cursor-pointer hover:bg-purple-600 hover:text-white  duration-500`}
           >
-            Neurologist
+           Software Engineer
           </p>
         </div>
         <div className="grid w-full gap-4 grid-cols-auto gap-y-6">
           {filterDoc.map((item, index) => (
             <div
               onClick={() => navigate(`/appintment/${item._id}`)}
-              className="overflow-hidden border border-green-500 cursor-pointer rounded-xl hover:translate-y-[-10px] transition-all duration-500"
+              className="overflow-hidden border border-purple-800 cursor-pointer rounded-xl hover:translate-y-[-10px] transition-all duration-500"
               key={index}
             >
-              <img className="bg-green-100 " src={item.image} alt="DocImage" />
+             
               <div className="p-4">
-                <div className="flex items-center gap-2 text-sm text-green-500">
-                  <p className="w-2 h-2 bg-green-500 rounded-full "></p>
-                  <p>Available</p>
-                </div>
-                <p className="text-lg font-medium text-gray-800 gray-800">
-                  {item.name}
+                
+                <p className="pb-3 text-lg font-medium text-gray-800 gray-800">
+                  {item.JobTitle}
                 </p>
-                <p className="text-sm text-gray-600">{item.specialty}</p>
+                <p className="pb-3 text-sm text-gray-600">{item.dis}</p>
+                <p className="text-sm font-bold text-purple-600">{item.techlnolegy}</p>
               </div>
             </div>
           ))}

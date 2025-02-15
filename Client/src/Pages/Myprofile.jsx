@@ -18,7 +18,7 @@ function Myprofile() {
   const [isEdit, setIsEdit] = useState(true);
 
   return (
-    <div className="flex flex-col max-w-lg gap-2 text-sm">
+    <div className="flex flex-col max-w-lg gap-2 text-sm ">
       <img
         className="rounded-full w-36"
         src={userData.image}
@@ -124,14 +124,14 @@ function Myprofile() {
       <div className="mt-10">
         {isEdit ? (
           <button
-            className="px-8 py-2 transition-all border border-green-700 rounded-full hover:text-white hover:bg-green-500 hover:shadow-lg"
+            className="px-8 py-2 transition-all border border-purple-800 rounded-full hover:text-white hover:bg-purple-800 hover:shadow-lg"
             onClick={() => setIsEdit(false)}
           >
             Save Changes
           </button>
         ) : (
           <button
-            className="px-8 py-2 transition-all border border-green-700 rounded-full hover:text-white hover:bg-green-500 hover:shadow-lg"
+            className="px-8 py-2 transition-all border border-purple-800 rounded-full hover:text-white hover:bg-purple-800 hover:shadow-lg"
             onClick={() => setIsEdit(true)}
           >
             Edit

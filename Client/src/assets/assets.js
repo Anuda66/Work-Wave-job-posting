@@ -58,29 +58,29 @@ export const doctors = [
     _id: "doc1",
     JobTitle: "Front-End Engineer",
     dis: "Job seekers with the right opportunities and helps companies find the best talent efficiently.",
-    techlnolegy: "C#, .Net",
+    techlnolegy: "React , JacvaScript",
     
     
   },
   {
     _id: "doc1",
-    JobTitle: "Front-End Engineer",
+    JobTitle: "Back-End Engineer",
     dis: "Job seekers with the right opportunities and helps companies find the best talent efficiently.",
-    techlnolegy: "C#, .Net",
+    techlnolegy: "MERN, SprinBoot",
     
   },
   {
     _id: "doc1",
-    JobTitle: "Front-End Engineer",
+    JobTitle: "Back-End Engineer",
     dis: "Job seekers with the right opportunities and helps companies find the best talent efficiently.",
-    techlnolegy: "C#, .Net",
+    techlnolegy: "C#, .Net, SprinBoot",
     
   },
   {
     _id: "doc1",
-    JobTitle: "Front-End Engineer",
+    JobTitle: "QA Engineer",
     dis: "Job seekers with the right opportunities and helps companies find the best talent efficiently.",
-    techlnolegy: "C#, .Net",
+    techlnolegy: "React , JacvaScript",
   },
   {
     _id: "doc1",
@@ -92,11 +92,17 @@ export const doctors = [
     _id: "doc1",
     JobTitle: "Front-End Engineer",
     dis: "Job seekers with the right opportunities and helps companies find the best talent efficiently.",
+    techlnolegy: "MERN, SprinBoot",
+  },
+  {
+    _id: "doc1",
+    JobTitle: "Software Engineerr",
+    dis: "Job seekers with the right opportunities and helps companies find the best talent efficiently.",
     techlnolegy: "C#, .Net",
   },
   {
     _id: "doc1",
-    JobTitle: "Front-End Engineer",
+    JobTitle: "Full Stack Engineer",
     dis: "Job seekers with the right opportunities and helps companies find the best talent efficiently.",
     techlnolegy: "C#, .Net",
   },
@@ -104,23 +110,17 @@ export const doctors = [
     _id: "doc1",
     JobTitle: "Front-End Engineer",
     dis: "Job seekers with the right opportunities and helps companies find the best talent efficiently.",
-    techlnolegy: "C#, .Net",
+    techlnolegy: "React , JacvaScript",
   },
   {
     _id: "doc1",
-    JobTitle: "Front-End Engineer",
+    JobTitle: "Full Stack Engineer",
     dis: "Job seekers with the right opportunities and helps companies find the best talent efficiently.",
     techlnolegy: "C#, .Net",
   },
   {
     _id: "doc1",
-    JobTitle: "Front-End Engineer",
-    dis: "Job seekers with the right opportunities and helps companies find the best talent efficiently.",
-    techlnolegy: "C#, .Net",
-  },
-  {
-    _id: "doc1",
-    JobTitle: "Front-End Engineer",
+    JobTitle: "AQ Engineer",
     dis: "Job seekers with the right opportunities and helps companies find the best talent efficiently.",
     techlnolegy: "C#, .Net",
   },
