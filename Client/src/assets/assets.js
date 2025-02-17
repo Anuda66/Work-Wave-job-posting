@@ -11,7 +11,7 @@ import specilityImage from "./specilityImage.png";
 import aboutImage from "./about.png";
 import contactInage from "./contactImage.png";
 import profileImage1 from "./prof1.jpg";
-import { AiFillBehanceSquare } from "react-icons/ai";
+
 
 //--------------------------
 export const assets = {
@@ -53,9 +53,116 @@ export const specialityData = [
   },
 ];
 
+export const jobs = [
+  {
+    _id: "job1",
+    JobTitle: "Front-End Engineer",
+    companyName:'Flego Inovation',
+    dis: "Job seekers with the right opportunities and helps companies find the best talent efficiently.",
+    requiremat:'1 Year Expirians',
+    techlnolegy: "React , JacvaScript",
+  },
+  {
+    _id: "job2",
+    JobTitle: "Back-End Engineer",
+    companyName:'Flego Inovation',
+    dis: "Job seekers with the right opportunities and helps companies find the best talent efficiently.",
+    requiremat:'1 Year Expirians',
+    techlnolegy: "React , JacvaScript",
+  },
+  {
+    _id: "job3",
+    JobTitle: "Front-End Engineer",
+    companyName:'Flego Inovation',
+    dis: "Job seekers with the right opportunities and helps companies find the best talent efficiently.",
+    requiremat:'1 Year Expirians',
+    techlnolegy: "React , JacvaScript",
+  },
+  {
+    _id: "job4",
+    JobTitle: "Front-End Engineer",
+    companyName:'Flego Inovation',
+    dis: "Job seekers with the right opportunities and helps companies find the best talent efficiently.",
+    requiremat:'1 Year Expirians',
+    techlnolegy: "React , JacvaScript",
+  },
+  {
+    _id: "job5",
+    JobTitle: "Front-End Engineer",
+    companyName:'Flego Inovation',
+    dis: "Job seekers with the right opportunities and helps companies find the best talent efficiently.",
+    requiremat:'1 Year Expirians',
+    techlnolegy: "React , JacvaScript",
+  },
+  {
+    _id: "job6",
+    JobTitle: "Front-End Engineer",
+    companyName:'Flego Inovation',
+    dis: "Job seekers with the right opportunities and helps companies find the best talent efficiently.",
+    requiremat:'1 Year Expirians',
+    techlnolegy: "React , JacvaScript",
+  },
+  {
+    _id: "job7",
+    JobTitle: "Front-End Engineer",
+    companyName:'Flego Inovation',
+    dis: "Job seekers with the right opportunities and helps companies find the best talent efficiently.",
+    requiremat:'1 Year Expirians',
+    techlnolegy: "React , JacvaScript",
+  },{
+    _id: "job8",
+    JobTitle: "Front-End Engineer",
+    companyName:'Flego Inovation',
+    dis: "Job seekers with the right opportunities and helps companies find the best talent efficiently.",
+    requiremat:'1 Year Expirians',
+    techlnolegy: "React , JacvaScript",
+  },
+  {
+    _id: "job9",
+    JobTitle: "Front-End Engineer",
+    companyName:'Flego Inovation',
+    dis: "Job seekers with the right opportunities and helps companies find the best talent efficiently.",
+    requiremat:'1 Year Expirians',
+    techlnolegy: "React , JacvaScript",
+  },
+  {
+    _id: "job10",
+    JobTitle: "Front-End Engineer",
+    companyName:'Flego Inovation',
+    dis: "Job seekers with the right opportunities and helps companies find the best talent efficiently.",
+    requiremat:'1 Year Expirians',
+    techlnolegy: "React , JacvaScript",
+  },
+  {
+    _id: "job11",
+    JobTitle: "Front-End Engineer",
+    companyName:'Flego Inovation',
+    dis: "Job seekers with the right opportunities and helps companies find the best talent efficiently.",
+    requiremat:'1 Year Expirians',
+    techlnolegy: "React , JacvaScript",
+  },
+  {
+    _id: "job12",
+    JobTitle: "Front-End Engineer",
+    companyName:'Flego Inovation',
+    dis: "Job seekers with the right opportunities and helps companies find the best talent efficiently.",
+    requiremat:'1 Year Expirians',
+    techlnolegy: "React , JacvaScript",
+  },
+  {
+    _id: "job13",
+    JobTitle: "Front-End Engineer",
+    companyName:'Flego Inovation',
+    dis: "Job seekers with the right opportunities and helps companies find the best talent efficiently.",
+    requiremat:'1 Year Expirians',
+    techlnolegy: "React , JacvaScript",
+  },
+  
+];
+
 export const doctors = [
   {
-    _id: "doc1",
+    _id: "job",
     JobTitle: "Front-End Engineer",
     dis: "Job seekers with the right opportunities and helps companies find the best talent efficiently.",
     techlnolegy: "React , JacvaScript",

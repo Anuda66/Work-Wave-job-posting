@@ -26,7 +26,7 @@ function Nav() {
             <li className="py-1 text-white">HOME</li>
             <hr className="hidden w-3/5 h-1 m-auto bg-white border-none rounded-full outline-none" />
           </NavLink>
-          <NavLink to={"/doctor"}>
+          <NavLink to={"/jobs"}>
             <li className="py-1 text-white"> JOBS</li>
             <hr className="hidden w-3/5 h-1 m-auto bg-white border-none rounded-full outline-none" />
           </NavLink>
@@ -107,8 +107,8 @@ function Nav() {
                 <li className="py-1">HOME</li>
                 <hr className="hidden w-3/5 h-1 m-auto bg-green-500 border-none outline-none" />
               </NavLink>
-              <NavLink to={"/doctor"}>
-                <li className="py-1">ALL DOCTOR</li>
+              <NavLink to={"/jobs"}>
+                <li className="py-1">Jobs</li>
                 <hr className="hidden w-3/5 h-1 m-auto bg-green-500 border-none outline-none" />
               </NavLink>
               <NavLink to={"/about"}>

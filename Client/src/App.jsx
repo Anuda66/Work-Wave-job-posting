@@ -13,6 +13,8 @@ import Appintment from './Pages/Appintment'
 import Nav from './Components/Nav'
 import Footer from './Components/Footer'
 import CVFormat from './Pages/CVFormat'
+import Jobs from './Pages/Jobs'
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -32,6 +34,8 @@ function App() {
           <Route  path="/singup" element={<Singup />} />
           <Route  path="/CVFormat" element={<CVFormat />} />
           <Route  path="/appintment/:docId" element={<Appintment />} />
+          <Route  path="/jobs" element={<Jobs />} />
+
         </Routes>
           
         </div> 
