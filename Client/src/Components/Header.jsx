@@ -57,11 +57,11 @@ function Header() {
       </div>
       {/*right side------------------------------------------------------------------ */}
       <div className="relative md:w-1/2">
-        {/*<img
+       <img
           className="bottom-0 w-full h-auto rounded-lg md:absolute "
           src={hederIMAGE}
           alt="Heder Image"
-        />*/}
+        />
       </div>
     </div>
   );

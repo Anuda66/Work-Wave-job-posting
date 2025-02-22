@@ -14,7 +14,7 @@ import Nav from './Components/Nav'
 import Footer from './Components/Footer'
 import CVFormat from './Pages/CVFormat'
 import Jobs from './Pages/Jobs'
-
+import ApplyToJob from './Pages/ApplyToJob'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -26,15 +26,17 @@ function App() {
           <Route  path="/" element={<Home />} />
           <Route  path="/about" element={<About/>} />
           <Route  path="/contact" element={<Contact />} />
-          <Route  path="/doctor" element={<Doctor />} />
-          <Route  path="/doctor/:specialty" element={<Doctor />} />
+         
+          
           <Route  path="/login" element={<Login />} />
           <Route  path="/myAppoiment" element={<MyAppoiment />} />
           <Route  path="/myprofile" element={<Myprofile />} />
           <Route  path="/singup" element={<Singup />} />
           <Route  path="/CVFormat" element={<CVFormat />} />
-          <Route  path="/appintment/:docId" element={<Appintment />} />
+         
           <Route  path="/jobs" element={<Jobs />} />
+          <Route  path="/AppliedToJob/:jobId" element={<ApplyToJob />} />
+
 
         </Routes>
           
