@@ -31,22 +31,27 @@ export const assets = {
 
 export const specialityData = [
   {
+    _id:1,
     specility: "Front-End Engineer",
     image: specilityImage,
   },
   {
+    _id:2,
     specility: "Back-End Engineer",
     image: specilityImage,
   },
   {
+    _id:3,
     specility: "Full Stack Engineer",
     image: specilityImage,
   },
   {
+    _id:4,
     specility: "Software Engineer",
     image: specilityImage,
   },
   {
+    _id:5,
     specility: "QA Engineer",
     image: specilityImage,
   },

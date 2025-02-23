@@ -35,6 +35,7 @@ function App() {
           <Route  path="/CVFormat" element={<CVFormat />} />
          
           <Route  path="/jobs" element={<Jobs />} />
+          <Route  path="/jobs/:catagary" element={<Jobs />} />
           <Route  path="/AppliedToJob/:jobId" element={<ApplyToJob />} />
 
 
