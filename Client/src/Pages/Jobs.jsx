@@ -1,15 +1,18 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import {AppContext} from '../Context/AppContext'
+
+
 function Jobs() {
 
-  const {catagary} = useParams()
+  const {JobTitle} = useParams()
   const [filterJob, setFilterJob] = useState([])
   const {jobs} = useContext(AppContext)
+  const navigate = useNavigate()
 
   const applyFilter = () => {
-    if (catagary){
-      setFilterJob(jobs.filter(job => job.catagary === catagary))
+    if (JobTitle){
+      setFilterJob(jobs.filter(job => job.JobTitle === JobTitle))
     }
     else{
       setFilterJob(jobs)
@@ -18,10 +21,11 @@ function Jobs() {
 
   useEffect(()=>{
     applyFilter()
-  },[jobs.catagary])
-  
+  },[jobs,JobTitle])
+
   return (
     <div>
+    
       <p>Broude through the docotors speciality.</p>
       <div>
         <div>
@@ -31,14 +35,14 @@ function Jobs() {
           <p>Software Engineer</p>
           <p>QA Engineer</p>
         </div>
-        <div>
+        <div className='grid w-full gap-4 grid-cols-auto gap-y-6'>
           {
             filterJob.map((item,index)=>(
-              <div onClick={()=>navigate(`/AppliedToJob/${item._id}`)} className='overflow-hidden  border-purple-600 border-2  cursor-pointer rounded-xl hover:translate-y-[-10px] transition-all duration-500'
+              <div onClick={()=>navigate(`/AppliedToJob/${item._id}`)} className='overflow-hidden  border-purple-600 border-2  cursor-pointer rounded-xl hover:translate-y-[-10px] transition-all duration-500 shadow-lg'
               key={index} >
                   <div className='p-4'>
                       <p className='pb-3 text-lg font-medium gray-800'>{item.JobTitle}</p>
-                      <p className='pb-2 text-sm text-gray-600'>{item.companyName}</p>
+                      <p className='pb-2 text-base text-gray-600'>{item.companyName}</p>
                       <p className='pb-2 text-sm stext-sm'>{item.dis}</p>
                       <p>{item.requiremat}</p>
                       <p className='pb-2 text-sm font-semibold text-purple-700'>{item.techlnolegy}</p>

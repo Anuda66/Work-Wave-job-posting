@@ -31,28 +31,23 @@ export const assets = {
 
 export const specialityData = [
   {
-    _id:1,
-    specility: "Front-End Engineer",
+    JobTitle: "Front-End Engineer",
     image: specilityImage,
   },
   {
-    _id:2,
-    specility: "Back-End Engineer",
+    JobTitle: "Back-End Engineer",
     image: specilityImage,
   },
   {
-    _id:3,
-    specility: "Full Stack Engineer",
+    JobTitle: "Full Stack Engineer",
+    image: specilityImage,
+  }, 
+  {
+    JobTitle: "Software Engineer",
     image: specilityImage,
   },
   {
-    _id:4,
-    specility: "Software Engineer",
-    image: specilityImage,
-  },
-  {
-    _id:5,
-    specility: "QA Engineer",
+    JobTitle: "QA Engineer",
     image: specilityImage,
   },
 ];
@@ -84,7 +79,7 @@ export const jobs = [
   },
   {
     _id: "job4",
-    JobTitle: "Front-End Engineer",
+    JobTitle: "Software Engineer",
     companyName:'Flego Inovation',
     dis: "Job seekers with the right opportunities and helps companies find the best talent efficiently.",
     requiremat:'1 Year Expirians',
@@ -92,7 +87,7 @@ export const jobs = [
   },
   {
     _id: "job5",
-    JobTitle: "Front-End Engineer",
+    JobTitle: "Back-End Engineer",
     companyName:'Flego Inovation',
     dis: "Job seekers with the right opportunities and helps companies find the best talent efficiently.",
     requiremat:'1 Year Expirians',
@@ -100,7 +95,7 @@ export const jobs = [
   },
   {
     _id: "job6",
-    JobTitle: "Front-End Engineer",
+    JobTitle: "Software Engineer",
     companyName:'Flego Inovation',
     dis: "Job seekers with the right opportunities and helps companies find the best talent efficiently.",
     requiremat:'1 Year Expirians',
@@ -115,7 +110,7 @@ export const jobs = [
     techlnolegy: "React , JacvaScript",
   },{
     _id: "job8",
-    JobTitle: "Front-End Engineer",
+    JobTitle: "Back-End Engineer",
     companyName:'Flego Inovation',
     dis: "Job seekers with the right opportunities and helps companies find the best talent efficiently.",
     requiremat:'1 Year Expirians',
@@ -155,7 +150,23 @@ export const jobs = [
   },
   {
     _id: "job13",
+    JobTitle: "Full Stack Engineer",
+    companyName:'ILAB Inovation',
+    dis: "Job seekers with the right opportunities and helps companies find the best talent efficiently.",
+    requiremat:'1 Year Expirians',
+    techlnolegy: "React , JacvaScript",
+  },
+  {
+    _id: "job13",
     JobTitle: "Front-End Engineer",
+    companyName:'Flego Inovation',
+    dis: "Job seekers with the right opportunities and helps companies find the best talent efficiently.",
+    requiremat:'1 Year Expirians',
+    techlnolegy: "React , JacvaScript",
+  },
+  {
+    _id: "job13",
+    JobTitle: "QA Engineer",
     companyName:'Flego Inovation',
     dis: "Job seekers with the right opportunities and helps companies find the best talent efficiently.",
     requiremat:'1 Year Expirians',
