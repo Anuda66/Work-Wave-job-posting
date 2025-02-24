@@ -25,15 +25,14 @@ function Jobs() {
 
   return (
     <div>
-    
-      <p>Broude through the docotors speciality.</p>
-      <div>
-        <div>
-          <p>Front-End Engineer</p>
-          <p>Back-End Engineer</p>
-          <p>Full Stack Engineer</p>
-          <p>Software Engineer</p>
-          <p>QA Engineer</p>
+      <p className='my-10 text-lg font-bold text-gray-600'>Broude through the job category.</p>
+      <div className='flex flex-col items-start gap-5 mt-5 sm:flex-row '>
+        <div className='flex flex-col gap-4 text-gray-600 text-md'>
+          <p onClick={()=>JobTitle === 'Front-End Engineer' ? navigate('/jobs') : navigate('/jobs/Front-End Engineer')} className={`w-[94Vw] sm:w-auto pl-3 py-1.5 pr-16 border border-e-gray-300 rounded transition-all cursor-pointer `}>Front-End Engineer</p>
+          <p onClick={()=>JobTitle === 'Back-End Engineer' ? navigate('/jobs') : navigate('/jobs/Back-End Engineer')} className={`w-[94Vw] sm:w-auto pl-3 py-1.5 pr-16 border border-e-gray-300 rounded transition-all cursor-pointer `}>Back-End Engineer</p>
+          <p onClick={()=>JobTitle === 'Full Stack Engineer' ? navigate('/jobs') : navigate('/jobs/Full Stack Engineer')} className={`w-[94Vw] sm:w-auto pl-3 py-1.5 pr-16 border border-e-gray-300 rounded transition-all cursor-pointer `}>Full Stack Engineer</p>
+          <p onClick={()=>JobTitle === 'Software Engineer' ? navigate('/jobs') : navigate('/jobs/Software Engineer')} className={`w-[94Vw] sm:w-auto pl-3 py-1.5 pr-16 border border-e-gray-300 rounded transition-all cursor-pointer `}>Software Engineer</p>
+          <p onClick={()=>JobTitle === 'QA Engineer' ? navigate('/jobs') : navigate('/jobs/QA Engineer')} className={`w-[94Vw] sm:w-auto pl-3 py-1.5 pr-16 border border-e-gray-300 rounded transition-all cursor-pointer `}>QA Engineer</p>
         </div>
         <div className='grid w-full gap-4 grid-cols-auto gap-y-6'>
           {

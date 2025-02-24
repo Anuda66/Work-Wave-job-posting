@@ -2,7 +2,7 @@ import React from 'react'
 import { assets } from '../assets/assets'
 function Footer() {
   return (
-    <div className='md:mx-10'>
+    <div className='mx-8 md:mx-10'>
         <hr  className='mt-40'/>
         <div className='flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-14 my-10 mt-10 text-sm'>
             <div>
@@ -29,7 +29,7 @@ function Footer() {
                 {/*right section------------*/}
                 <h2 className='mb-5 text-xl font-medium'>GET IN TOUCH</h2>
                 <ul  className='flex flex-col gap-2 text-gray-600 '>
-                    <li>+0-000-000-000</li>
+                    <li>+94712861997</li>
                     <li>anudaransara@gmail.com</li>
                 </ul>
             </div>
