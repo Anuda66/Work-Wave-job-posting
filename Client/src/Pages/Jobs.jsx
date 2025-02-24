@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import {AppContext} from '../Context/AppContext'
 
-
 function Jobs() {
 
   const {JobTitle} = useParams()
@@ -27,7 +26,7 @@ function Jobs() {
     <div>
       <div className='flex flex-col justify-between my-10 md:flex-row'>
         <p className='text-lg font-bold text-gray-600 '>Broude through the job category.</p>
-        <button onClick={()=>navigate('/jobs')} className="px-8 py-3 mx-6 mt-6 font-light text-white transition duration-300 ease-in-out delay-150 bg-purple-300 rounded-full hover:-translate-y-1 hover:scale-110 hover:bg-purple-500 hover:shadow-lg md:mt-0">All Jobs</button>
+        <button onClick={()=>navigate('/jobs')} className="px-8 py-3 mx-6 mt-6 font-light text-white transition duration-300 ease-in-out delay-150 bg-purple-500 rounded-full hover:-translate-y-1 hover:scale-110 hover:bg-purple-700 hover:shadow-lg md:mt-0">All Jobs</button>
       </div>
       <div className='flex flex-col items-start gap-5 mt-5 sm:flex-row '>
         <div className='flex flex-col gap-4 text-gray-600 text-md'>
@@ -52,7 +51,6 @@ function Jobs() {
                       <p className='pb-3 text-lg font-medium gray-800'>{item.JobTitle}</p>
                       <p className='pb-2 text-base text-gray-600'>{item.companyName}</p>
                       <p className='pb-2 text-sm stext-sm'>{item.dis}</p>
-                      <p>{item.requiremat}</p>
                       <p className='pb-2 text-sm font-semibold text-purple-700'>{item.techlnolegy}</p>
                   </div>
               </div>

@@ -19,7 +19,6 @@ function LatestJobs() {
                     <p className='pb-3 text-lg font-medium gray-800'>{item.JobTitle}</p>
                     <p className='pb-2 text-sm text-gray-600'>{item.companyName}</p>
                     <p className='pb-2 text-sm stext-sm'>{item.dis}</p>
-                    <p>{item.requiremat}</p>
                     <p className='pb-2 text-sm font-semibold text-purple-700'>{item.techlnolegy}</p>
                 </div>
             </div>
