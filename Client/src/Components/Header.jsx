@@ -3,7 +3,7 @@ import prof1 from "../assets/prof1.jpg";
 import prof2 from "../assets/prof2.jpg";
 import prof3 from "../assets/prof3.jpg";
 import prof4 from "../assets/prof4.jpg";
-import hederIMAGE from "../assets/doc.png";
+import heder from "../assets/heder.png"
 
 import { FaLongArrowAltRight } from "react-icons/fa";
 
@@ -59,7 +59,7 @@ function Header() {
       <div className="relative md:w-1/2">
        <img
           className="bottom-0 w-full h-auto rounded-lg md:absolute "
-          src={hederIMAGE}
+          src={heder}
           alt="Heder Image"
         />
       </div>
