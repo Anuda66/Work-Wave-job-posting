@@ -96,7 +96,7 @@ function Nav() {
           {/* mobile menu -----------------------*/}
           <div
             className={`${
-              showMenu ? "flex w-full h-screen" : "h-0 w-0"
+              showMenu ? "fixed w-full " : "h-0 w-0"
             } md:hidden right-0 top-0 bottom-0 z-20 overflow-hidden bg-white transition-all`}
           >
             <div className="flex items-center justify-between px-5 py-6 ">
