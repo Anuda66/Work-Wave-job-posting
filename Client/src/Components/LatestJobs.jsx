@@ -13,7 +13,7 @@ function LatestJobs() {
      <p className='text-sm text-center stext-sm '>Simply browse through our extensive list of featured jobs.</p>
      <div className='grid w-full gap-4 px-3 pt-5 grid-cols-auto gap-y-6 sm:px-0'>
         {jobs.slice(0,10).map((item,index)=>( 
-            <div onClick={()=>navigate(`/AppliedToJob/${item._id}`)} className='overflow-hidden  border-purple-600 border-2  cursor-pointer rounded-xl hover:translate-y-[-10px] transition-all duration-500 shadow-xl'
+            <div onClick={()=>{navigate(`/AppliedToJob/${item._id} `);scrollTo(0,0)}} className='overflow-hidden  border-purple-600 border-2  cursor-pointer rounded-xl hover:translate-y-[-10px] transition-all duration-500 shadow-xl'
             key={index} >
                 <div className='p-4'>
                     <p className='pb-3 text-lg font-medium gray-800'>{item.JobTitle}</p>

@@ -10,7 +10,7 @@ function Footer() {
                 
                 <h2 className='pb-5 text-2xl font-semibold text-purple-800'>Work Wave</h2>
                 <p className='w-full leading-6 text-gray-600 md:w-2/3'>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                At Work-Wave, our mission is to bridge the gap between job seekers and employers by offering an intuitive and efficient platform for job searching and recruitment. Whether you're a fresh graduate seeking your first role or a company looking to hire top talent quickly.
                 </p>
             </div>
 
