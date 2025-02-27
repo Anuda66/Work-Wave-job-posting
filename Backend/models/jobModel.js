@@ -7,6 +7,7 @@ const jobSchema = new mongoose.Schema({
     requiremat:{type:String, require:true},
     techlnolegy:{type:String, require:true},
     date:{type:Number, require:true},
+    image: {type:String, require:true},
 
 })
 
