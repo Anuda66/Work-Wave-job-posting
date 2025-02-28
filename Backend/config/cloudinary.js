@@ -1,4 +1,7 @@
-import { v2 as cloudinary } from "cloudinary";
+import dotenv from 'dotenv';
+import { v2 as cloudinary } from 'cloudinary';
+
+dotenv.config(); // Load environment variables from .env file
 
 const connectCloudinary = async () => {
   cloudinary.config({
