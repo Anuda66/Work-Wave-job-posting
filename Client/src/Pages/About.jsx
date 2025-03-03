@@ -17,12 +17,10 @@ function About() {
           <p>
           Founded with the vision of improving the traditional job search experience, we leverage the latest technology, including machine learning, to match candidates with relevant opportunities. Employers can quickly find qualified applicants, and job seekers benefit from real-time alerts and a user-friendly platform to apply for jobs that match their skills and preferences.
           </p>
-
-         
         </div>
       </div>
       <div className='my-4 text-xl'>
-          <h2>WHY <span className='font-semibold text-gray-700'></span> CHOOSE US</h2>
+          <h2>WHY <span className='font-semi-bold text-gray-700'></span> CHOOSE US</h2>
       </div>
       <div className='flex flex-col my-10 mb-20 md:flex-row'>
           <div className='flex flex-col gap-5 px-10 py-8 border md:px-16 sm:py-16 text-[15px] hover:bg-purple-600 hover:text-white cursor-pointer duration-700 '>

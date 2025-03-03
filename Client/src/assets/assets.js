@@ -66,7 +66,7 @@ export const jobs = [
   {
     _id: "job2",
     JobTitle: "Back-End Engineer",
-    companyName:'Flego Inovation',
+    companyName:'IFS',
     dis: "Job seekers with the right opportunities and helps companies find the best talent efficiently.",
     requiremat:'1 Year Expirians',
     techlnolegy: "React , JacvaScript",
@@ -75,7 +75,7 @@ export const jobs = [
   {
     _id: "job3",
     JobTitle: "Front-End Engineer",
-    companyName:'Flego Inovation',
+    companyName:'CSST',
     dis: "Job seekers with the right opportunities and helps companies find the best talent efficiently.",
     requiremat:'1 Year Expirians',
     techlnolegy: "React , JacvaScript",
@@ -84,7 +84,7 @@ export const jobs = [
   {
     _id: "job4",
     JobTitle: "Software Engineer",
-    companyName:'Flego Inovation',
+    companyName:'Creative software',
     dis: "Job seekers with the right opportunities and helps companies find the best talent efficiently.",
     requiremat:'1 Year Expirians',
     techlnolegy: "React , JacvaScript",
@@ -102,7 +102,7 @@ export const jobs = [
   {
     _id: "job6",
     JobTitle: "Software Engineer",
-    companyName:'Flego Inovation',
+    companyName:'Boron',
     dis: "Job seekers with the right opportunities and helps companies find the best talent efficiently.",
     requiremat:'1 Year Expirians',
     techlnolegy: "React , JacvaScript",

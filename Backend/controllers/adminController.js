@@ -1,16 +1,16 @@
 import {v2 as cloudinary} from 'cloudinary'
 import jobModel from '../models/jobModel.js'
-
+import jwt from 'jsonwebtoken'
 
 // Api for adding Jobs from admin -----------------------
 
 const addJob = async (req, res) => {
     try {
-      const { JobTitle, companyName, dis, requiremat, techlnolegy, date } = req.body;
+      const { JobTitle, companyName, dis, requiremat, techlnolegy, date , intro} = req.body;
       // const imageFile = req.file;
   
       // Check if all required fields are present
-      if (!JobTitle || !companyName || !dis || !requiremat || !techlnolegy) {
+      if (!JobTitle || !companyName || !dis || !requiremat || !techlnolegy || !intro) {
         return res.json({ success: false, message: "Missing data" });
       }
   
@@ -28,6 +28,7 @@ const addJob = async (req, res) => {
         JobTitle,
         companyName, 
         dis,
+        intro,
         requiremat,
         techlnolegy,
         date: Date.now(),
@@ -45,5 +46,26 @@ const addJob = async (req, res) => {
       res.json({ success: false, message: error.message });
     }
   };
-  
-  export { addJob };
+
+
+  // API for the admin loging
+
+  const loginAdmin = async(req,res) => {
+    try{
+      const {email, password} = req.body
+
+      if (email === process.env.ADMIN_EMAIL && password === process.env.ADMIN_PASSWORD){
+        const token = jwt.sign(email + password, process.env.JWT_SECRET)
+        res.json({success:true,token})
+      }
+      else{
+        res.json({success:false, message:"Ivalid Creadentials"}) 
+      }
+    }
+    catch(error){
+      console.log(error);
+      res.json({ success: false, message: error.message });
+    }
+  }
+
+  export { addJob, loginAdmin };
