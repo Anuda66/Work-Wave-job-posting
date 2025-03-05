@@ -8,5 +8,12 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+
+  theme:{
+    extends:{
+      'primary': '#3a855f7' ,
+      'secondary': '#460c76',
+    }
+  },
   server: {port:5174}
 })
