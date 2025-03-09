@@ -16,7 +16,7 @@ function Navbar() {
   }
 
   return (
-    <div className="flex items-center justify-between px-4 py-3 bg-purple-600 shadow-xl sm:px-10">
+    <div className="flex items-center justify-between px-4 py-3 bg-purple-600 sm:px-10">
       <div className="flex items-center gap-8 text-xs">
         <img className="w-24 cursor-pointer" src={logo} alt="logo" />
         <p className="border px-2.5 py-0.5 rounded-full border-white text-white">{aToken ? "Admin" : "Company"}</p>
