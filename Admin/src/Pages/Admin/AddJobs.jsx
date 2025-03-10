@@ -1,38 +1,70 @@
 import React from "react";
-
+import profile from "../../assets/upload_area.png";
 function AddJobs() {
   return (
-    <form>
+    <form className="w-full m-5">
+      <p className="mb-3 text-lg font-medium ">Add Jobs</p>
 
-      <p>Add Jobs</p>
-
-      <div>
-
-        <div>
-          <p>Compnay Name</p>
-          <input type="text" placeholder="Ex : Microsoft" required />
+      <div className="w-full max-w-4xl px-8 py-8 bg-white border rounded-xl max-h-[80vh] overflow-y-scroll border-gray-300 shadow-xl">
+        <div className="flex items-center gap-4 mb-8 text-gray-500 ">
+          <label htmlFor="job-img">
+            <img className="w-16 rounded-full cursor-pointer " src={profile} alt="Image" />
+          </label>
+          <input type="file" id="job-img" hidden />
+          <p>Uplode Profile <br/>Image</p>
         </div>
 
-        <div>
-          <p>Job Title</p>
-          <input type="text" placeholder="Ex : Front-End Engineer" required />
-        </div>
+        <div className="flex flex-col items-start gap-10 text-gray-600 ">
+         <div className="w-full ">
+            <div className="flex flex-col flex-1 gap-1">
+              <p>Compay Name</p>
+              <input className="px-3 py-2 border border-purple-600 rounded" type="text" placeholder="Ex : Microsoft" required />
+            </div>
 
-        <div>
-          <p>Technology</p>
-          <input type="text" placeholder="Ex : React, JacvaScript" required />
-        </div>
+            <div className="flex flex-col flex-1 gap-1">
+              <p>Job Title</p>
+              <select className="px-3 py-2 border border-purple-600 rounded" name="" id="">
+                <option value="Front-End Engineer">Front-End Engineer</option>
+                <option value="Back-End Engineer">Back-End Engineer</option>
+                <option value="Full Stack Engineer">Full Stack Engineer</option>
+                <option value="Software Engineer">Software Engineer</option>
+                <option value="QA Engineer">QA Engineer</option>
+              </select>
+            </div>
 
-        <div>
-          <p>Discription </p>
-          <input type="text" placeholder="Ex : Warehouse applications using a wide range of technologies..." required />
-        </div>
+            <div className="flex flex-col flex-1 gap-1">
+              <p>Technology</p>
+              <input className="px-3 py-2 border border-purple-600 rounded" type="text" placeholder="Ex : .NEt, React Js" required />
+            </div>
 
-        <div>
-          <p>Requirements</p>
-          <input type="text" placeholder="Ex : Requirements" required />
-        </div>
+            <div className="flex flex-col flex-1 gap-1">
+              <p>Discription: </p>
+              <textarea className="px-3 py-2 border border-purple-600 rounded" placeholder="Write about job details..." rows={5} />
+            </div>
 
+            <div className="flex flex-col flex-1 gap-1">
+              <p>Requirements: </p>
+              <textarea className="px-3 py-2 border border-purple-600 rounded" placeholder="Write about requirements..." rows={5} />
+            </div>
+
+            <div className="flex flex-col flex-1 gap-1">
+              <p>Email: </p>
+              <input className="px-3 py-2 border border-purple-600 rounded" type="email" placeholder="Ex : abc@gmail.com" />
+            </div>
+            
+            <div className="flex flex-col flex-1 gap-1">
+              <p>Link: </p>
+              <input className="px-3 py-2 border border-purple-600 rounded" type="url" id="Job-id" placeholder="Ex : http://www.abc.com" />
+            </div>
+          </div>
+          
+         
+          </div>
+          <div className="flex justify-between">
+          <button className="px-10 py-3 mt-4 text-white bg-green-400 rounded-full cursor-pointer hover:bg-green-500">Add Job</button>
+          
+          <button className="px-10 py-3 mt-4 text-white bg-red-600 rounded-full cursor-pointer hover:bg-red-800" type="reset">Clear</button>
+          </div>
       </div>
     </form>
   );
