@@ -1,20 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import profile from "../../assets/upload_area.png";
+
 function AddJobs() {
+
+  const [proIma, setProImage] = useState(false)
+  const [comName, setComName] = useState('')
+  const [jobTitel, setJobTitel] = useState('Front-End Engineer')
+  const [technology, setTechnology] = useState('')
+  const [discription, setDiscription] = useState('')
+  const [requirements, setRequirements] = useState('')
+  const [email, setEmail] = useState('')
+  const [link, setLink] = useState('')
+
+
+
+
+
+  
   return (
-    <form className="w-full m-5">
+    <form className="w-full m-5 ">
       <p className="mb-3 text-lg font-medium ">Add Jobs</p>
 
-      <div className="w-full max-w-4xl px-8 py-8 bg-white border rounded-xl max-h-[80vh] overflow-y-scroll border-gray-300 shadow-xl">
-        <div className="flex items-center gap-4 mb-8 text-gray-500 ">
+      <div className="w-full max-w-4xl px-8 py-8 bg-white border rounded-xl max-h-[80vh] overflow-y-scroll border-gray-300 shadow-xl items-center justify-center">
+        
+        <div className="flex items-center gap-4 mb-8 text-gray-500">
           <label htmlFor="job-img">
-            <img className="w-16 rounded-full cursor-pointer " src={profile} alt="Image" />
+            <img className="w-16 cursor-pointer rounded-xl " src={proIma ? URL.createObjectURL(proIma) : profile} alt="Image" />
           </label>
-          <input type="file" id="job-img" hidden />
+          <input onChange={(e)=> setProImage(e.target.files[0])} type="file" id="job-img" hidden />
           <p>Uplode Profile <br/>Image</p>
         </div>
 
-        <div className="flex flex-col items-start gap-10 text-gray-600 ">
+        <div className="flex flex-col items-start gap-10 space-y-3 text-gray-600">
          <div className="w-full ">
             <div className="flex flex-col flex-1 gap-1">
               <p>Compay Name</p>
