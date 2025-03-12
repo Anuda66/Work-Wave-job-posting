@@ -3,7 +3,7 @@ import profile from "../../assets/upload_area.png";
 import { useContext } from "react";
 import { AdminContext } from "../../Context/AdminContext";
 import {toast} from 'react-toastify'
-
+import axios from "axios";
 
 function AddJobs() {
 
@@ -41,6 +41,17 @@ function AddJobs() {
       formData.forEach((value,key)=>{
         console.log(`${key} : ${value}`);
       })
+
+      //API call to back end ---------------------------
+      
+      const {data} = await axios.post(backendUrl + '/api/admin/add-job',formData, {headers: {aToken}})
+      
+      if (data.success){
+        toast.success(data.message)
+      }
+      else{
+        toast.error(data.message)
+      }
       
     }
     catch(error){
@@ -110,8 +121,6 @@ function AddJobs() {
           
           <div className="flex justify-between">
             <button type="submit" className="px-10 py-3 mt-4 text-white bg-green-400 rounded-full cursor-pointer hover:bg-green-500">Add Job</button>
-          
-            <button className="px-10 py-3 mt-4 text-white bg-red-600 rounded-full cursor-pointer hover:bg-red-800" type="reset">Clear</button>
           </div>
           
       </div>
