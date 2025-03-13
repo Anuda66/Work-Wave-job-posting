@@ -6,11 +6,11 @@ import jwt from 'jsonwebtoken'
 
 const addJob = async (req, res) => {
     try {
-      const { JobTitle, companyName, dis, requiremat, techlnolegy, date , intro} = req.body;
+      const { JobTitle, comName, discription, requiremat, techlnolegy, date , link} = req.body;
       // const imageFile = req.file;
   
       // Check if all required fields are present
-      if (!JobTitle || !companyName || !dis || !requiremat || !techlnolegy || !intro) {
+      if (!JobTitle || !comName || !discription || !requiremat || !techlnolegy || !link) {
         return res.json({ success: false, message: "Missing data" });
       }
   
@@ -26,11 +26,11 @@ const addJob = async (req, res) => {
       // Add data to the database
       const jobData = {
         JobTitle,
-        companyName, 
-        dis,
-        intro,
+        comName, 
+        discription,
         requiremat,
         techlnolegy,
+        link,
         date: Date.now(),
         //image: imageUrl
       };
