@@ -17,6 +17,7 @@ app.use(cors())
 
 //API endpoint--------------------------------
 app.use('/api/admin',adminRouter)
+
 // localhost:4000/api/admin/add-job
 
 
