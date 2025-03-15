@@ -79,4 +79,22 @@ const addJob = async (req, res) => {
     }
   }
 
-  export { addJob, loginAdmin };
+  // API to get all job list for admin panel---------------------------------
+
+  const allJobs = async(req, res) => {
+    try{
+      const jobs = await jobModel.find({})
+      res.json({success:true,jobs})
+    }
+    catch(error){
+      console.log(error);
+      res.json({success:false, message: error.message})
+      
+    }
+  }
+
+
+
+
+
+export { addJob, loginAdmin, allJobs };
