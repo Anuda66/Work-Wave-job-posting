@@ -16,10 +16,22 @@ function AllJobs() {
       <p>All Jobs</p>
       <div>
         {
-         jobs.map((item, index) =>{
+         jobs && Array.isArray(jobs) && jobs.map((item, index) =>{
           return(
-            <div>
+            <div key={index}>
              
+              <div>
+                <p>{item.comName}</p>  
+                <p>{item.jobTitel}</p>
+                <p>{item.technology}</p>
+
+                <p>About the Role:</p>
+                <p>{item.discription}</p>
+                
+                <p>Requirements:</p>
+                <p>{item.requirements}</p>
+                
+              </div>
             </div>
           )
          })
