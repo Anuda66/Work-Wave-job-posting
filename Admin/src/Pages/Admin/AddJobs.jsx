@@ -62,7 +62,7 @@ function AddJobs() {
   return (
     <form onSubmit={onSubmitHandler} className="w-full m-5 ">
       
-      <p className="mb-3 text-lg font-medium ">Add Jobs</p>
+      <p className='mb-10 text-xl'>Add Jobs</p>
 
       <div className="w-full max-w-4xl px-8 py-8 bg-white border rounded-xl max-h-[80vh] overflow-y-scroll border-gray-300 shadow-xl items-center justify-center">
         
