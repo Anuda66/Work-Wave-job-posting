@@ -1,16 +1,37 @@
 import { createContext, useState } from "react";
+import axios from 'axios'
+import {toast} from 'react-toastify'
 
 export const AdminContext = createContext()
 
 const AdminContextProvider = (props) => {
 
     const [aToken, setAToken] = useState(localStorage.getItem('aToken')?localStorage.getItem('aToken'):'')
+    const [jobs, setJobs] = useState()
 
     const backendUrl = import.meta.env.VITE_BACKEND_URL
 
+    const getAllJobs = async () => {
+        try{
+            const {data} = await axios.post(backendUrl + '/api/admin/all-jobs', {}, {headers:{aToken}})
+            if (data.success){
+                setJobs(data.jobs)
+                console.log(data.jobs );
+                
+            }
+            else{
+                toast.error(data.message)
+            }
+        }
+        catch (error){
+            toast.error(error.message)
+        }
+    }
+
     const value = {
         aToken,setAToken,
-        backendUrl,
+        backendUrl,jobs,
+        getAllJobs
     }
 
     return (
