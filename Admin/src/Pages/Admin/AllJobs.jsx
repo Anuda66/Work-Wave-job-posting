@@ -18,7 +18,7 @@ function AllJobs() {
         {
          jobs && Array.isArray(jobs) && jobs.map((item, index) =>{
           return(
-            <div className='p-3 overflow-hidden border-gray-400 cursor-pointer border-1 rounded-xl max-w-96 group' key={index}>
+            <div className='p-3 overflow-hidden bg-white border-gray-300 shadow-xl cursor-pointer border-1 rounded-xl max-w-96 group' key={index}>
               <div className='space-y-1.5'>
                <div className='flex items-center gap-5'>
                 <img className='w-10 h-10 rounded-full' src={item.image} alt=''/>
