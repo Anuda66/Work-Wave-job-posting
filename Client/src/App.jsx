@@ -14,11 +14,14 @@ import CVFormat from './Pages/CVFormat'
 import Jobs from './Pages/Jobs'
 import ApplyToJob from './Pages/ApplyToJob'
 import GoToTop from './Components/GoToTop'
+import { ToastContainer, toast } from 'react-toastify';
+
 function App() {
   const [count, setCount] = useState(0)
 
   return (
       <div > 
+        <ToastContainer/>
         <Nav/>
         <div className='mx-4 sm:mx-[10%]'>
         <Routes>
