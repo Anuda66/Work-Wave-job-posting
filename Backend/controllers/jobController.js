@@ -1,4 +1,4 @@
-import jobModel from "../models/jobModel";
+import jobModel from "../models/jobModel.js";
 
 const jobList = async(req, res)=>{
     try{

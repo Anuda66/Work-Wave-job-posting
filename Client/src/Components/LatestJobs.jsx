@@ -12,15 +12,26 @@ function LatestJobs() {
      <h1 className='text-3xl font-medium'>Featured Jobs</h1>
      <p className='text-sm text-center stext-sm '>Simply browse through our extensive list of featured jobs.</p>
      <div className='grid w-full gap-4 px-3 pt-5 grid-cols-auto gap-y-6 sm:px-0'>
-        {jobs.slice(0,10).map((item,index)=>( 
-            <div onClick={()=>{navigate(`/AppliedToJob/${item._id} `);scrollTo(0,0)}} className='overflow-hidden  border-purple-600 border-2  cursor-pointer rounded-xl hover:translate-y-[-10px] transition-all duration-500 shadow-xl'
+        {
+        jobs.slice(0,10).map((item,index)=>( 
+            <div onClick={()=>{navigate(`/AppliedToJob/${item._id} `);scrollTo(0,0)}} className='p-3 overflow-hidden bg-white border-gray-200 shadow-xl cursor-pointer border-1 rounded-xl max-w-96 group hover:translate-y-[-10px] transition-all duration-500 border-2 '
             key={index} >
-                <div className='p-4'>
-                    <p className='pb-3 text-lg font-medium gray-800'>{item.JobTitle}</p>
-                    <p className='pb-2 text-sm text-gray-600'>{item.companyName}</p>
-                    <p className='pb-2 text-sm stext-sm'>{item.dis}</p>
-                    <p className='pb-2 text-sm font-semibold text-purple-700'>{item.techlnolegy}</p>
+                <div className='space-y-1.5'>
+               <div className='flex items-center gap-5'>
+                <img className='w-10 h-10 rounded-full' src={item.image} alt=''/>
+                <p className='font-bold text-gray-500'>{item.comName}</p>  
+               </div>
+               
+               <div className='flex flex-col gap-3'>
+                  <p className='text-lg font-bold text-gray-600'>{item.jobTitel}</p>
+                  <p className='text-base text-purple-700'>{item.technology}</p>
                 </div>
+                  <p className='text-md '>About the Role:</p>
+                  <p className='text-sm text-gray-500'>{item.discription}</p>
+
+                  <p>Requirements:</p>
+                  <p className='text-sm text-gray-500'>{item.requirements}</p>
+              </div>
             </div>
         ))}
      </div>
