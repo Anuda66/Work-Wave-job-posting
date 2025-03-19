@@ -33,27 +33,27 @@ function ApplyToJob() {
             <div className="flex items-center gap-5">
               <img
                 className="rounded-full w-9"
-                src={profileImage}
+                src={jobInfo.image}
                 alt="profile image"
               />
-              <p className="text-xl text-gray-500">{jobInfo.companyName}</p>
+              <p className="text-xl text-gray-500">{jobInfo.comName}</p>
             </div>
 
             <div className="flex items-center gap-5">
-              <h1 className="text-2xl font-bold">{jobInfo.JobTitle}</h1>
-              <p className="text-base text-purple-800">{jobInfo.techlnolegy}</p>
+              <h1 className="text-2xl font-bold">{jobInfo.jobTitel}</h1>
+              <p className="text-base text-purple-800">{jobInfo.technology}</p>
             </div>
 
             <hr className="border-[1.5px]" />
 
             <div>
               <p className="text-lg">About the Role:</p>
-              <p className="text-sm text-gray-500">{jobInfo.aboutJob}</p>
+              <p className="text-sm text-gray-500">{jobInfo.discription}</p>
             </div>
 
             <div className="">
               <p className="text-lg">Requirements:</p>
-              <p className="text-sm text-gray-500">{jobInfo.requiremat}</p>
+              <p className="text-sm text-gray-500">{jobInfo.requirements}</p>
             </div>
 
             <div className="flex items-center justify-center">
@@ -70,7 +70,7 @@ function ApplyToJob() {
           </div>
         </div>
         {/*Rated Job section----------------------------------- */}
-        <RelatedJobs jobId={jobId} JobTitle={jobInfo.JobTitle}/>
+        <RelatedJobs jobId={jobId} JobTitle={jobInfo.jobTitel}/>
       </div>
     )
   );
