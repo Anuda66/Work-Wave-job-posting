@@ -44,4 +44,10 @@ const registerUser = async(req, res)=>{
     }
 }
 
+// Api for user login-------------------------------------
+
+const loginUser = async (req, res)=>{
+    
+}
+
 export {registerUser}
