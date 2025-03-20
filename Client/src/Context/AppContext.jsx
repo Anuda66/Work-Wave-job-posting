@@ -8,10 +8,7 @@ const AppContextProvider = (props) => {
 
   const backendUrl = import.meta.env.VITE_BACKEND_URL
   const [jobs, setJobs] = useState([])
-
-  const value = {
-    jobs,
-  };
+  const [token, setToken] = useState('')
 
   const getJobData = async()=>{
 
@@ -30,11 +27,15 @@ const AppContextProvider = (props) => {
     }
   }
 
+  const value = {
+    jobs,
+    token,setToken,
+    backendUrl
+  };
+
   useEffect(()=>{
     getJobData()
   },[])
-
-
 
   return (
     <AppContext.Provider value={value}>

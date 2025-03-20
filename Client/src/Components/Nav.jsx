@@ -1,16 +1,22 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import logo from "../assets/logo.png";
 import { NavLink, useNavigate } from "react-router-dom";
 import profileImage from "../assets/prof1.jpg";
 import { MdOutlineArrowDropDown } from "react-icons/md";
 import { AiOutlineMenuFold } from "react-icons/ai";
 import { RxCross1 } from "react-icons/rx";
+import { AppContext } from "../Context/AppContext";
 
 function Nav() {
   const navigate = useNavigate();
-
+  const {token, setToken} = useContext(AppContext)
   const [showMenu, setShowMenu] = useState(true);
-  const [token, setToken] = useState(true);
+
+  const logout = () => {
+    setToken(false)
+    localStorage.removeItem('token')
+  }
+  
 
   return (
     <div className="bg-purple-500">
@@ -72,7 +78,7 @@ function Nav() {
                   </p>
                   <hr />
                   <p
-                    onClick={() => setToken(false)}
+                    onClick={logout}
                     className="cursor-pointer hover:text-black"
                   >
                     LogOut
