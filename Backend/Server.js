@@ -20,7 +20,7 @@ app.use(cors())
 //API endpoint--------------------------------
 app.use('/api/admin',adminRouter )
 app.use('/api/job', jobRoute)
-app.use('api/user',userRouter)
+app.use('/api/user',userRouter)
 
 // localhost:4000/api/admin/add-job
 
