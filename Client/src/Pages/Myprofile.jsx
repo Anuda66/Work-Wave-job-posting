@@ -1,20 +1,9 @@
-import React, { useState } from "react";
-import { assets } from "../assets/assets";
+import React, { useContext, useState } from "react";
+import { AppContext } from "../Context/AppContext";
 
 function Myprofile() {
-  const [userData, setUserData] = useState({
-    name: "Anuda Ransara",
-    image: assets.profileImage1,
-    email: "anudaransara@gmail.com",
-    phone: "071-1234567",
-    address: {
-      line1: "No. 123, Galle Road",
-      line2: "Colombo 01",
-    },
-    gender: "Male",
-    job: "QA",
-    dob: "1998/12/04",
-  });
+  
+  const {userData, setUserData} = useContext(AppContext)
 
   const [isEdit, setIsEdit] = useState(true);
 
@@ -31,7 +20,7 @@ function Myprofile() {
           value={userData.name}
           type="text"
           onChange={(e) =>
-            setUserData((prev) => ({ ...prev, name: e.target.value }))
+          setUserData((prev) => ({ ...prev, name: e.target.value }))
           }
         />
       ) : (
@@ -57,30 +46,18 @@ function Myprofile() {
           ) : (
             <p>{userData.phone}</p>
           )}
-          <p>Address : </p>
+          <p>location : </p>
           {isEdit ? (
             <p>
               <input
-                onChange={(e) =>
-                  setUserData((prev) => ({
-                    ...prev,
-                    address: { ...prev.address, line1: e.target.value },
-                  }))
-                }
-                value={userData.address.line1}
-                type="text"
-              />
+              value={userData.location}
+              type="text"
+              onChange={(e) =>
+                setUserData((prev) => ({ ...prev, location: e.target.value }))
+              }
+            />
               <br />
-              <input
-                onChange={(e) =>
-                  setUserData((prev) => ({
-                    ...prev,
-                    address: { ...prev.address, line2: e.target.value },
-                  }))
-                }
-                value={userData.address.line2}
-                type="text"
-              />
+              
             </p>
           ) : (
             <p>
@@ -115,7 +92,7 @@ function Myprofile() {
               onChange={(e) =>
                 setUserData((prev) => ({ ...prev, job: e.target.value }))
               }
-              value={userData.job}
+              value={userData.jobTitel}
             >
               <option value="Front-End Engineer">Front-End Engineer</option>
               <option value="Back-End Engineer">Back-End Engineer</option>
