@@ -2,6 +2,7 @@ import validator from 'validator'
 import bcrypt from 'bcryptjs'
 import userModel from '../models/userModel.js'
 import jwt from 'jsonwebtoken'
+import {v2 as cloudinary} from 'cloudinary'
 
 // API to register user---------------------------
 
@@ -72,13 +73,13 @@ const loginUser = async (req, res)=>{
     }
 }
 
-// Api for get user profile data -------------------------------------
+// API for get user profile data -------------------------------------
 const getProfile = async (req, res) =>{
     try{
         const {userId} = req.body
         const userData = await userModel.findById(userId).select('-password')
 
-        res.jason({success:true,userData})
+        res.json({success:true,userData})
     }
     catch(error){
         console.log(error);
@@ -86,4 +87,34 @@ const getProfile = async (req, res) =>{
     }
 }
 
-export {registerUser, loginUser, getProfile}
+// API to update userfrofile ---------------------------------------
+
+const updateProfile = async (req, res) => {
+    try{
+        const {userId, name, phone, dob, gender, location, jobTitel} = req.body
+        const imageFile = req.file
+
+        if(!name || !phone || !dob || !gender || !location || !jobTitel){
+            return res.json({success:false, message:"Data Missing"})
+        }
+
+        await userModel.findByIdAndUpdate(userId, {name, phone, dob, location, gender, jobTitel})
+
+        if (imageFile) {
+            //uplode image cloudnary--------------------------------
+            const imageUplode = await cloudinary.uploader.upload(imageFile.path,{resource_type:'image'})
+            const imageURL = imageUplode.secure_url
+
+            await userModel.findByIdAndUpdate(userId,{image:imageURL})
+        }
+
+        res.json({success:true, message:"Profile Updated"})
+            
+    }
+    catch(error){
+        console.log(error);
+        res.json({success:false, message:error.message})
+    }
+}
+
+export {registerUser, loginUser, getProfile, updateProfile}
