@@ -12,6 +12,7 @@ function Myprofile() {
       line2: "Colombo 01",
     },
     gender: "Male",
+    job: "QA",
     dob: "1998/12/04",
   });
 
@@ -107,6 +108,25 @@ function Myprofile() {
           ) : (
             <p>{userData.gender}</p>
           )}
+
+          <p>Job Field :</p>
+          {isEdit ? (
+            <select
+              onChange={(e) =>
+                setUserData((prev) => ({ ...prev, job: e.target.value }))
+              }
+              value={userData.job}
+            >
+              <option value="Front-End Engineer">Front-End Engineer</option>
+              <option value="Back-End Engineer">Back-End Engineer</option>
+              <option value="Full Stack Engineer">Full Stack Engineer</option>
+              <option value="Software Engineer">Software Engineer</option>
+              <option value="QA Engineer">QA Engineer</option>
+            </select>
+          ) : (
+            <p>{userData.gender}</p>
+          )}
+
           <p>Birthday : </p>
           {isEdit ? (
             <input

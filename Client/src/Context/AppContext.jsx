@@ -9,6 +9,7 @@ const AppContextProvider = (props) => {
   const backendUrl = import.meta.env.VITE_BACKEND_URL
   const [jobs, setJobs] = useState([])
   const [token, setToken] = useState(localStorage.getItem('token') ? localStorage.getItem('token') : false)
+  const [userData, setUserData] = useState(false)
 
   const getJobData = async()=>{
 
@@ -27,15 +28,42 @@ const AppContextProvider = (props) => {
     }
   }
 
+  const loadUserPrfileData = async () => {
+    try{
+      const {data} = await axios.get(backendUrl + '/api/user/get-profile',{headers:{token}})
+      if (data.success){
+        setUserData(data.userData)
+      }
+      else{
+        toast.error(data.message)
+      }
+    }
+    catch(error){
+      console.log(error);
+      toast.error(error.message)
+    }
+  }
+
   const value = {
     jobs,
     token,setToken,
-    backendUrl
+    backendUrl,
+    userData, setUserData,
+    loadUserPrfileData,
   };
 
   useEffect(()=>{
     getJobData()
   },[])
+
+  useEffect(()=>{
+    if (token){
+      loadUserPrfileData()
+    }
+    else{
+      setUserData(false)
+    }
+  },[token])
 
   return (
     <AppContext.Provider value={value}>
