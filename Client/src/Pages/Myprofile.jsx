@@ -1,7 +1,8 @@
 import React, { useContext, useState } from "react";
 import { AppContext } from "../Context/AppContext";
 import profile from '../assets/upload_icon.png'
-import { FaCamera } from "react-icons/fa6";
+import axios from "axios";
+import { toast } from "react-toastify";
 
 function Myprofile() {
   
@@ -12,6 +13,36 @@ function Myprofile() {
 
   const updateUserProfileData = async () => {
     
+    try{
+      
+      const formData = new FormData()
+      
+      formData.append ('name', userData.name)
+      formData.append ('phone', userData.phone)
+      formData.append ('location', userData.location)
+      formData.append ('gender', userData.gender)
+      formData.append ('jobTitel', userData.jobTitel)
+      formData.append ('dob', userData.dob)
+
+      image && formData.append ('image', image)
+
+      const {data} = await axios.post(backendUrl + '/api/user/update-profile', formData,{headers:{token}})
+
+      if (data.success){
+        toast.success(data.message)
+        await loadUserPrfileData()
+        setIsEdit(false)
+        setImage(true)
+      }
+      else{
+        toast.error(data.message)
+      }
+    }
+    catch(error){
+      console.log(error);
+      toast.error(error.message)
+      
+    }
   }
 
   
@@ -137,7 +168,7 @@ function Myprofile() {
         {isEdit ? (
           <button
             className="px-8 py-2 text-white transition-all bg-green-500 border rounded-full hover:text-white hover:bg-purple-800 hover:shadow-lg"
-            onClick={() => setIsEdit(false)}
+            onClick={updateUserProfileData}
           >
             Save Changes
           </button>
