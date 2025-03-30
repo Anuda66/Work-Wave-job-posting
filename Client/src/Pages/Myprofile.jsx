@@ -8,7 +8,7 @@ function Myprofile() {
   
   const {userData, setUserData, token, backendUrl, loadUserPrfileData} = useContext(AppContext)
 
-  const [isEdit, setIsEdit] = useState(true);
+  const [isEdit, setIsEdit] = useState(false);
   const [image, setImage] = useState(false)
 
   const updateUserProfileData = async () => {
@@ -25,14 +25,15 @@ function Myprofile() {
       formData.append ('dob', userData.dob)
 
       image && formData.append ('image', image)
-
+      
+      console.log("Request URL:", backendUrl + '/api/user/update-profile');
       const {data} = await axios.post(backendUrl + '/api/user/update-profile', formData,{headers:{token}})
 
       if (data.success){
         toast.success(data.message)
         await loadUserPrfileData()
         setIsEdit(false)
-        setImage(true)
+        setImage(false)
       }
       else{
         toast.error(data.message)
@@ -41,10 +42,8 @@ function Myprofile() {
     catch(error){
       console.log(error);
       toast.error(error.message)
-      
     }
   }
-
   
   return userData && (
     <div className="flex flex-col max-w-lg gap-2 p-10 text-sm border-2 shadow-xl bg-gray-50 rounded-2xl">
@@ -53,7 +52,7 @@ function Myprofile() {
         isEdit
         ? <label htmlFor="image">
           <div className="relative inline-block cursor-pointer">
-            <img className="rounded-full opacity-85 w-36 " src={image ? URL.createObjectURL(image) : userData.image} alt="" />
+            <img className="rounded-full opacity-85 w-36 " src={image ? URL.createObjectURL(image) : userData.image} alt="profile image" />
             <img className="absolute w-10 bottom-12 right-12" src={image ? '' : profile} alt='' />
           </div>
           <input onChange={(e)=>setImage(e.target.files[0])} type="file" id="image" hidden/>
@@ -168,8 +167,7 @@ function Myprofile() {
         {isEdit ? (
           <button
             className="px-8 py-2 text-white transition-all bg-green-500 border rounded-full hover:text-white hover:bg-purple-800 hover:shadow-lg"
-            onClick={updateUserProfileData}
-          >
+            onClick={updateUserProfileData}>
             Save Changes
           </button>
         ) : (

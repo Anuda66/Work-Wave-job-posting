@@ -9,7 +9,7 @@ UserRouter.post('/register', registerUser)
 UserRouter.post('/login', loginUser)
 
 UserRouter.get('/get-profile', authUser, getProfile)
-UserRouter.get('/update-profile', upload.single('image'),authUser, updateProfile)
+UserRouter.post('/update-profile', upload.single('image'),authUser, updateProfile)
 
 
 
