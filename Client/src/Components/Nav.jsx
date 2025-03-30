@@ -9,7 +9,7 @@ import { AppContext } from "../Context/AppContext";
 
 function Nav() {
   const navigate = useNavigate();
-  const {token, setToken} = useContext(AppContext)
+  const {token, setToken, userData} = useContext(AppContext)
   const [showMenu, setShowMenu] = useState(true);
 
   const logout = () => {
@@ -46,11 +46,11 @@ function Nav() {
           </NavLink>
         </ul>
         <div className="flex items-center gap-4">
-          {token ? (
+          {token && userData  ? (
             <div className="relative flex items-center gap-2 cursor-pointer group">
               <img
                 className="rounded-full w-9"
-                src={profileImage}
+                src={userData.image}
                 alt="profile image"
               />
               <MdOutlineArrowDropDown className="text-white"/>

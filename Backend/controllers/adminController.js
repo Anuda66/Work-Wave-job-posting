@@ -2,6 +2,7 @@ import {v2 as cloudinary} from 'cloudinary'
 import jobModel from '../models/jobModel.js'
 import jwt from 'jsonwebtoken'
 import validator from'validator'
+import userModel from '../models/userModel.js';
 
 
 // Api for adding Jobs from admin -----------------------
@@ -92,8 +93,27 @@ const addJob = async (req, res) => {
     }
   }
 
+  // API to get dashboard data for admin panel---------------------------------
 
+  const adminDashboard = async (req, res) =>{
+    try{
+      const jobs = await jobModel.find({})
+      const users = await userModel.find({})
 
+      const dashData = {
+        jobs : jobs.length,
+        users : users.length,
+        latstJobs : jobs.reverse().slice(0,5)
+      }
 
+      res.json({success:true, dashData})
+
+    }
+    catch(error){
+      console.log(error);
+      res.json({success:false, message:error.message, adminDashboard})
+      
+    }
+  }
 
 export { addJob, loginAdmin, allJobs };
