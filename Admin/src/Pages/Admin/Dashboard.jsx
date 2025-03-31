@@ -37,21 +37,26 @@ function Dashboard() {
       </div>
 
       <div className='bg-white'>
-        <div className='flex items-center gap-2.5 px-4 mt-10 rounded-t border py-2'>
+        <div className='flex items-center gap-2.5 px-4 mt-10 rounded-t border py-2 '>
           <FaAddressBook className='text-2xl text-purple-600'/>
           <p className='font-semibold'>Latest Jobs</p>
         </div>
       </div>
-      <div className='pt-4 border border-t-0'>
+      <div className='pt-4 border border-t-0 rounded-b'>
         {
           dashData.latstJobs.map((item, index)=>{
             return(
-              <div className='flex items-center gap-3 px-6 py-3 hover:bg-gray-200 ' key={index}>
+              <div className='flex items-center justify-between gap-3 px-6 py-3 border-b-2 border-gray-300 hover:bg-gray-200' key={index}>
                 <img  src={item.image} alt="" className='w-10 rounded-full'/>
-                <div className='flex text-sm gap-7'>
+                <div className='flex gap-7'>
                   <p className='font-medium text-gray-600'>{item.comName}</p>
-                  <p className='font-medium text-gray-600'>{item.jobTitel}</p>
-                  <p className='font-medium text-gray-600'>{item.technology}</p>
+                </div>
+                <div>
+                <p className='font-medium text-gray-600'>{item.jobTitel}</p>
+                <p className='font-medium text-purple-700'>{item.technology}</p>
+                </div>
+                <div>
+                <p>{item.email}</p>
                 </div>
               </div>
             )
