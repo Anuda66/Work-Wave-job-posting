@@ -116,4 +116,4 @@ const addJob = async (req, res) => {
     }
   }
 
-export { addJob, loginAdmin, allJobs };
+export { addJob, loginAdmin, allJobs, adminDashboard };
