@@ -64,10 +64,10 @@ function Nav() {
                   </p>
                   <hr />
                   <p
-                    onClick={() => navigate("/myAppoiment")}
+                    onClick={() => navigate("/myjobs")}
                     className="cursor-pointer hover:text-black"
                   >
-                    Applied Job
+                    My Jobs
                   </p>
                   <hr />
                   <p
@@ -109,7 +109,7 @@ function Nav() {
               <RxCross1 onClick={() => setShowMenu(false)} />
             </div>
             <ul className="flex flex-col items-center gap-2 px-5 mt-5 text-lg font-medium">
-              <NavLink to={"/"}>
+              <NavLink to={"/"} >
                 <li className="py-1">HOME</li>
                 <hr className="hidden w-3/5 h-1 m-auto bg-purple-700 border-none outline-none" />
               </NavLink>

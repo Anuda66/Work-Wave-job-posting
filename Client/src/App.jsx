@@ -15,6 +15,7 @@ import Jobs from './Pages/Jobs'
 import ApplyToJob from './Pages/ApplyToJob'
 import GoToTop from './Components/GoToTop'
 import { ToastContainer, toast } from 'react-toastify';
+import MyJobs from './Pages/MyJobs'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -31,6 +32,7 @@ function App() {
          
           <Route  path="/login" element={<Login />} />
           <Route  path="/myAppoiment" element={<MyAppoiment />} />
+          <Route  path="/myjobs" element={<MyJobs />} />
           <Route  path="/myprofile" element={<Myprofile />} />
           <Route  path="/singup" element={<Singup />} />
           <Route  path="/CVFormat" element={<CVFormat />} />
