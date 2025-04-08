@@ -1,7 +1,6 @@
 import React, { useContext, useState } from "react";
 import logo from "../assets/logo.png";
 import { NavLink, useNavigate } from "react-router-dom";
-import profileImage from "../assets/prof1.jpg";
 import { MdOutlineArrowDropDown } from "react-icons/md";
 import { AiOutlineMenuFold } from "react-icons/ai";
 import { RxCross1 } from "react-icons/rx";
@@ -34,6 +33,10 @@ function Nav() {
           </NavLink>
           <NavLink to={"/jobs"}>
             <li className="py-1 text-white"> JOBS</li>
+            <hr className="hidden w-3/5 h-1 m-auto bg-white border-none rounded-full outline-none" />
+          </NavLink>
+          <NavLink to={"/candidates"}>
+            <li className="py-1 text-white"> CANDIDATES </li>
             <hr className="hidden w-3/5 h-1 m-auto bg-white border-none rounded-full outline-none" />
           </NavLink>
           <NavLink to={"/about"}>
@@ -114,7 +117,11 @@ function Nav() {
                 <hr className="hidden w-3/5 h-1 m-auto bg-purple-700 border-none outline-none" />
               </NavLink>
               <NavLink to={"/jobs"}>
-                <li className="py-1">Jobs</li>
+                <li className="py-1">JOBS</li>
+                <hr className="hidden w-3/5 h-1 m-auto bg-purple-700 border-none outline-none" />
+              </NavLink>
+              <NavLink to={"/candidates"}>
+                <li className="py-1">CANDIDATES</li>
                 <hr className="hidden w-3/5 h-1 m-auto bg-purple-700 border-none outline-none" />
               </NavLink>
               <NavLink to={"/about"}>

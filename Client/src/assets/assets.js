@@ -191,3 +191,9 @@ export const jobs = [
   
 ];
 
+export const candidates = [
+  {
+    Name : 'Anuda Ransara',
+    
+  }
+]

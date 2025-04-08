@@ -5,7 +5,6 @@ import Home from './Pages/Home'
 import  About from './pages/About'
 import  Contact from './pages/Contact'
 import Login from './pages/Login'
-import MyAppoiment from './Pages/MyAppointment'
 import Myprofile from './pages/Myprofile'
 import Singup from './pages/Singup'
 import Nav from './Components/Nav'
@@ -16,6 +15,7 @@ import ApplyToJob from './Pages/ApplyToJob'
 import GoToTop from './Components/GoToTop'
 import { ToastContainer, toast } from 'react-toastify';
 import MyJobs from './Pages/MyJobs'
+import Candidates from './Pages/candidates'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -29,9 +29,9 @@ function App() {
           <Route  path="/" element={<Home />} />
           <Route  path="/about" element={<About/>} />
           <Route  path="/contact" element={<Contact />} />
-         
+          <Route  path="/candidates" element={<Candidates/>} />
           <Route  path="/login" element={<Login />} />
-          <Route  path="/myAppoiment" element={<MyAppoiment />} />
+          
           <Route  path="/myjobs" element={<MyJobs />} />
           <Route  path="/myprofile" element={<Myprofile />} />
           <Route  path="/singup" element={<Singup />} />
