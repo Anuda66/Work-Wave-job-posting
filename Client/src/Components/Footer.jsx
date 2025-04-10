@@ -1,5 +1,5 @@
 import React from 'react'
-import { assets } from '../assets/assets'
+
 function Footer() {
   return (
     <div className='mx-8 md:mx-10'>

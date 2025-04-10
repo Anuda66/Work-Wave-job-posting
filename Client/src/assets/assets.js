@@ -52,6 +52,8 @@ export const specialityData = [
   },
 ];
 
+
+
 export const jobs = [
   {
     _id: "job1",
@@ -193,7 +195,6 @@ export const jobs = [
 
 export const candidates = [
   {
-    Name : 'Anuda Ransara',
-    
+    Name : 'Anuda'
   }
 ]

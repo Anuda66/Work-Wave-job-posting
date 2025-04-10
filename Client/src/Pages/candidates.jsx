@@ -1,10 +1,9 @@
 import React from 'react'
+import {specialityData} from '../assets/assets'
 
 function candidates() {
   return (
-    <div>
-      
-     
+    <div id='speciality'>
       
     </div>
   )

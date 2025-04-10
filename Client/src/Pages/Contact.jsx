@@ -1,5 +1,5 @@
 import React from "react";
-import { assets } from "../assets/assets";
+
 import contactImage from '../assets/conatact1.jpg'
 
 function Contact() {

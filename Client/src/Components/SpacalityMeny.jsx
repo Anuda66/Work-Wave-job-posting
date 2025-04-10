@@ -22,10 +22,7 @@ function SpacalityMeny() {
           to={`/jobs/${item.JobTitle}`}
         >
           <div className="flex justify-center h-20 px-3 py-8 border-2 border-purple-700 rounded-2xl hover:shadow-2xl">
-            
-              {/*<img className="w-16 mb-2 sm:w-24" src={item.image} alt="" />*/}
               <p className="text-lg font-bold">{item.JobTitle}</p>
-            
           </div>
           </Link>
         ))}

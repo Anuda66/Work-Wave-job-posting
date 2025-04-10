@@ -1,6 +1,6 @@
 import React from 'react'
-import { assets } from '../assets/assets'
 import AboutImage from '../assets/about.jpg'
+
 function About() {
   return (
     <div>
@@ -20,7 +20,7 @@ function About() {
         </div>
       </div>
       <div className='my-4 text-xl'>
-          <h2>WHY <span className='font-semi-bold text-gray-700'></span> CHOOSE US</h2>
+          <h2>WHY <span className='text-gray-700 font-semi-bold'></span> CHOOSE US</h2>
       </div>
       <div className='flex flex-col my-10 mb-20 md:flex-row'>
           <div className='flex flex-col gap-5 px-10 py-8 border md:px-16 sm:py-16 text-[15px] hover:bg-purple-600 hover:text-white cursor-pointer duration-700 '>
