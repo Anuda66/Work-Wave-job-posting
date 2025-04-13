@@ -201,7 +201,7 @@ export const users = [
     email : 'anudaransara@gmail.com',
     phone : '0712861997',
     location : 'Matara',
-    JobTitle : 'QA Engineer',
+    JobTitle : 'Back-End Engineer',
     skils: 'React, JavaScript, Node.js',
 
   },
@@ -256,6 +256,17 @@ export const users = [
     phone : '0712861997',
     location : 'Matara',
     JobTitle : 'Full Stack Engineer',
+    skils: 'React, JavaScript, Node.js',
+
+  },
+  {
+    _id: "can01",
+    about : 'Web developer and Python enthusiast, I thrive on problem-solving and interactive design. Self-learned in MERN stack development and enthusiastic to React Native',
+    name : 'Anuda',
+    email : 'anudaransara@gmail.com',
+    phone : '0712861997',
+    location : 'Matara',
+    JobTitle : 'Software Engineer',
     skils: 'React, JavaScript, Node.js',
 
   },
