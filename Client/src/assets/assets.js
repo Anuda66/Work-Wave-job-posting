@@ -201,7 +201,7 @@ export const users = [
     email : 'anudaransara@gmail.com',
     phone : '0712861997',
     location : 'Matara',
-    JobTitle : 'Back-End Engineer',
+    JobTitle : 'QA Engineer',
     skils: 'React, JavaScript, Node.js',
 
   },
@@ -212,7 +212,7 @@ export const users = [
     email : 'anudaransara@gmail.com',
     phone : '0712861997',
     location : 'Matara',
-    JobTitle : 'Back-End Engineer',
+    JobTitle : 'Software Engineer',
     skils: 'React, JavaScript, Node.js',
   },
   {
@@ -222,7 +222,7 @@ export const users = [
     email : 'anudaransara@gmail.com',
     phone : '0712861997',
     location : 'Matara',
-    JobTitle : 'Back-End Engineer',
+    JobTitle : 'QA Engineer',
     skils: 'React, JavaScript, Node.js',
 
   },
@@ -233,7 +233,7 @@ export const users = [
     email : 'anudaransara@gmail.com',
     phone : '0712861997',
     location : 'Matara',
-    JobTitle : 'Back-End Engineer',
+    JobTitle : 'Front-End Engineer',
     skils: 'React, JavaScript, Node.js',
 
   },
@@ -255,7 +255,7 @@ export const users = [
     email : 'anudaransara@gmail.com',
     phone : '0712861997',
     location : 'Matara',
-    JobTitle : 'Back-End Engineer',
+    JobTitle : 'Full Stack Engineer',
     skils: 'React, JavaScript, Node.js',
 
   },
@@ -266,7 +266,7 @@ export const users = [
     email : 'anudaransara@gmail.com',
     phone : '0712861997',
     location : 'Matara',
-    JobTitle : 'Back-End Engineer',
+    JobTitle : 'Software Engineer',
     skils: 'React, JavaScript, Node.js',
 
   }

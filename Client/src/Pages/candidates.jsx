@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams, BrowserRouter } from 'react-router-dom';
 import { users } from '../assets/assets';
 import { useState } from 'react';
 
@@ -31,18 +31,18 @@ function candidates() {
       </div>
 
       <div className='flex flex-col items-start gap-5 mt-5 sm:flex-row '>
-      <div className='flex flex-col gap-4 text-gray-600 text-md'>
-          
-          <p onClick={()=>JobTitle === 'Front-End Engineer' ? navigate('/candidates') : navigate('/candidates/Front-End Engineer')} className={`w-[94Vw] sm:w-auto pl-3 py-1.5 pr-16 border border-e-gray-300 rounded transition-all cursor-pointer ${JobTitle === "Front-End Engineer" ? "bg-purple-300 text-black" : ""}`}>Front-End Engineer</p>
-          
-          <p onClick={()=>JobTitle === 'Back-End Engineer' ? navigate('/candidates') : navigate('/candidates/Back-End Engineer')} className={`w-[94Vw] sm:w-auto pl-3 py-1.5 pr-16 border border-e-gray-300 rounded transition-all cursor-pointer ${JobTitle === "Back-End Engineer" ? "bg-purple-300 text-black" : ""}`}>Back-End Engineer</p>
-          
-          <p onClick={()=>JobTitle === 'Full Stack Engineer' ? navigate('/candidates') : navigate('/candidates/Full Stack Engineer')} className={`w-[94Vw] sm:w-auto pl-3 py-1.5 pr-16 border border-e-gray-300 rounded transition-all cursor-pointer ${JobTitle === "Full Stack Engineer" ? "bg-purple-300 text-black" : ""}`}>Full Stack Engineer</p>
-          
-          <p onClick={()=>JobTitle === 'Software Engineer' ? navigate('/candidates') : navigate('/candidates/Software Engineer')} className={`w-[94Vw] sm:w-auto pl-3 py-1.5 pr-16 border border-e-gray-300 rounded transition-all cursor-pointer ${JobTitle === "Software Engineer" ? "bg-purple-300 text-black" : ""}`}>Software Engineer</p>
-          
-          <p onClick={()=>JobTitle === 'QA Engineer' ? navigate('/candidates') : navigate('/candidates/QA Engineer')} className={`w-[94Vw] sm:w-auto pl-3 py-1.5 pr-16 border border-e-gray-300 rounded transition-all cursor-pointer ${JobTitle === "QA Engineer" ? "bg-purple-300 text-black" : ""}`}>QA Engineer</p>
-          
+        <div className='flex flex-col gap-4 text-gray-600 text-md'>
+
+          <p onClick={() => JobTitle === 'Front-End Engineer' ? navigate('/candidates') : navigate('/candidates/Front-End Engineer')} className={`w-[94Vw] sm:w-auto pl-3 py-1.5 pr-16 border border-e-gray-300 rounded transition-all cursor-pointer ${JobTitle === "Front-End Engineer" ? "bg-purple-300 text-black" : ""}`}>Front-End Engineer</p>
+
+          <p onClick={() => JobTitle === 'Back-End Engineer' ? navigate('/candidates') : navigate('/candidates/Back-End Engineer')} className={`w-[94Vw] sm:w-auto pl-3 py-1.5 pr-16 border border-e-gray-300 rounded transition-all cursor-pointer ${JobTitle === "Back-End Engineer" ? "bg-purple-300 text-black" : ""}`}>Back-End Engineer</p>
+
+          <p onClick={() => JobTitle === 'Full Stack Engineer' ? navigate('/candidates') : navigate('/candidates/Full Stack Engineer')} className={`w-[94Vw] sm:w-auto pl-3 py-1.5 pr-16 border border-e-gray-300 rounded transition-all cursor-pointer ${JobTitle === "Full Stack Engineer" ? "bg-purple-300 text-black" : ""}`}>Full Stack Engineer</p>
+
+          <p onClick={() => JobTitle === 'Software Engineer' ? navigate('/candidates') : navigate('/candidates/Software Engineer')} className={`w-[94Vw] sm:w-auto pl-3 py-1.5 pr-16 border border-e-gray-300 rounded transition-all cursor-pointer ${JobTitle === "Software Engineer" ? "bg-purple-300 text-black" : ""}`}>Software Engineer</p>
+
+          <p onClick={() => JobTitle === 'QA Engineer' ? navigate('/candidates') : navigate('/candidates/QA Engineer')} className={`w-[94Vw] sm:w-auto pl-3 py-1.5 pr-16 border border-e-gray-300 rounded transition-all cursor-pointer ${JobTitle === "QA Engineer" ? "bg-purple-300 text-black" : ""}`}>QA Engineer</p>
+
         </div>
 
         <div className='grid w-full gap-4 grid-cols-auto gap-y-6'>
