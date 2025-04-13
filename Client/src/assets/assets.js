@@ -193,8 +193,81 @@ export const jobs = [
   
 ];
 
-export const candidates = [
+export const users = [
   {
-    Name : 'Anuda'
+    _id: "can01",
+    name : 'Anuda',
+    about : 'Web developer and Python enthusiast, I thrive on problem-solving and interactive design. Self-learned in MERN stack development and enthusiastic to React Native',
+    email : 'anudaransara@gmail.com',
+    phone : '0712861997',
+    location : 'Matara',
+    JobTitle : 'Back-End Engineer',
+    skils: 'React, JavaScript, Node.js',
+
+  },
+  {
+    _id: "can02",
+    name : 'Anuda',
+    about : 'Web developer and Python enthusiast, I thrive on problem-solving and interactive design. Self-learned in MERN stack development and enthusiastic to React Native',
+    email : 'anudaransara@gmail.com',
+    phone : '0712861997',
+    location : 'Matara',
+    JobTitle : 'Back-End Engineer',
+    skils: 'React, JavaScript, Node.js',
+  },
+  {
+    _id: "can03",
+    name : 'Anuda',
+    about : 'Web developer and Python enthusiast, I thrive on problem-solving and interactive design. Self-learned in MERN stack development and enthusiastic to React Native',
+    email : 'anudaransara@gmail.com',
+    phone : '0712861997',
+    location : 'Matara',
+    JobTitle : 'Back-End Engineer',
+    skils: 'React, JavaScript, Node.js',
+
+  },
+  {
+    _id: "can04",
+    about : 'Web developer and Python enthusiast, I thrive on problem-solving and interactive design. Self-learned in MERN stack development and enthusiastic to React Native',
+    name : 'Anuda',
+    email : 'anudaransara@gmail.com',
+    phone : '0712861997',
+    location : 'Matara',
+    JobTitle : 'Back-End Engineer',
+    skils: 'React, JavaScript, Node.js',
+
+  },
+  {
+    _id: "can05",
+    about : 'Web developer and Python enthusiast, I thrive on problem-solving and interactive design. Self-learned in MERN stack development and enthusiastic to React Native',
+    name : 'Anuda',
+    email : 'anudaransara@gmail.com',
+    phone : '0712861997',
+    location : 'Matara',
+    JobTitle : 'Back-End Engineer',
+    skils: 'React, JavaScript, Node.js',
+
+  },
+  {
+    _id: "can06",
+    about : 'Web developer and Python enthusiast, I thrive on problem-solving and interactive design. Self-learned in MERN stack development and enthusiastic to React Native',
+    name : 'Anuda',
+    email : 'anudaransara@gmail.com',
+    phone : '0712861997',
+    location : 'Matara',
+    JobTitle : 'Back-End Engineer',
+    skils: 'React, JavaScript, Node.js',
+
+  },
+  {
+    _id: "can01",
+    about : 'Web developer and Python enthusiast, I thrive on problem-solving and interactive design. Self-learned in MERN stack development and enthusiastic to React Native',
+    name : 'Anuda',
+    email : 'anudaransara@gmail.com',
+    phone : '0712861997',
+    location : 'Matara',
+    JobTitle : 'Back-End Engineer',
+    skils: 'React, JavaScript, Node.js',
+
   }
 ]
