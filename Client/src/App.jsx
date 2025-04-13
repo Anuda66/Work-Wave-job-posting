@@ -33,8 +33,8 @@ function App() {
 
           <Route  path="/candidates" element={<Candidates/>} />
           <Route  path="/candidates:JobTitle" element={<Candidates/>} />
-          
-          <Route  path="/candidates/:userId" element={<CandidateProfile/>} />
+
+          <Route  path="/candidateProfile/:userId" element={<CandidateProfile/>} />
 
 
           <Route  path="/login" element={<Login />} />

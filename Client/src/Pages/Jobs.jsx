@@ -28,7 +28,9 @@ function Jobs() {
         <p className='text-lg font-bold text-gray-600 '>Broude through the job category.</p>
         <button onClick={()=>navigate('/jobs')} className="px-8 py-3 mx-6 mt-6 font-light text-white transition duration-300 ease-in-out delay-150 bg-purple-500 rounded-full hover:-translate-y-1 hover:scale-110 hover:bg-purple-700 hover:shadow-lg md:mt-0">All Jobs</button>
       </div>
+
       <div className='flex flex-col items-start gap-5 mt-5 sm:flex-row '>
+        
         <div className='flex flex-col gap-4 text-gray-600 text-md'>
           
           <p onClick={()=>JobTitle === 'Front-End Engineer' ? navigate('/jobs') : navigate('/jobs/Front-End Engineer')} className={`w-[94Vw] sm:w-auto pl-3 py-1.5 pr-16 border border-e-gray-300 rounded transition-all cursor-pointer ${JobTitle === "Front-End Engineer" ? "bg-purple-300 text-black" : ""}`}>Front-End Engineer</p>
@@ -42,6 +44,7 @@ function Jobs() {
           <p onClick={()=>JobTitle === 'QA Engineer' ? navigate('/jobs') : navigate('/jobs/QA Engineer')} className={`w-[94Vw] sm:w-auto pl-3 py-1.5 pr-16 border border-e-gray-300 rounded transition-all cursor-pointer ${JobTitle === "QA Engineer" ? "bg-purple-300 text-black" : ""}`}>QA Engineer</p>
           
         </div>
+
         <div className='grid w-full gap-4 grid-cols-auto gap-y-6'>
           {
             filterJob.map((item,index)=>(
