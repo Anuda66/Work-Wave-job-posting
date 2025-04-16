@@ -48,3 +48,21 @@ npm install
 cd ../frontend
 npm install
 ```
+# Environment Configuration
+Create .env file in backend directory:
+```bash
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret_key
+PORT=5000
+```
+
+# Run the application
+```bash
+# Start backend server
+cd backend
+npm run dev
+
+# Start frontend
+cd ../frontend
+npm start
+```
