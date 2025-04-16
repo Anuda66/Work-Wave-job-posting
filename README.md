@@ -36,3 +36,15 @@ A modern job posting and recruitment platform connecting employers with talented
 ```bash
 git clone https://github.com/Anuda66/Work-Wave-job-posting.git
 cd Work-Wave-job-posting
+```
+
+# Backend setup
+```bash
+cd backend
+npm install
+```
+# Frontend setup
+```bash
+cd ../frontend
+npm install
+```
