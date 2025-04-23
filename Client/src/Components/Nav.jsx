@@ -108,27 +108,28 @@ function Nav() {
               showMenu ? "fixed w-full " : "h-0 w-0"
             } md:hidden right-0 top-0 bottom-0 z-20 overflow-hidden bg-white transition-all`}
           >
-            <div className="flex items-center justify-between px-5 py-6 ">
-              <RxCross1 onClick={() => setShowMenu(false)} />
+            <div className="flex items-center justify-between px-10 py-10 ">
+              <p className="text-xl font-bold text-purple-700">WorkWave</p>
+              <RxCross1 className="text-xl " onClick={() => setShowMenu(false)} />
             </div>
             <ul className="flex flex-col items-center gap-2 px-5 mt-5 text-lg font-medium">
-              <NavLink to={"/"} >
+              <NavLink onClick={()=>setShowMenu(false)} to={"/"} >
                 <li className="py-1">HOME</li>
                 <hr className="hidden w-3/5 h-1 m-auto bg-purple-700 border-none outline-none" />
               </NavLink>
-              <NavLink to={"/jobs"}>
+              <NavLink onClick={()=>setShowMenu(false)} to={"/jobs"}>
                 <li className="py-1">JOBS</li>
                 <hr className="hidden w-3/5 h-1 m-auto bg-purple-700 border-none outline-none" />
               </NavLink>
-              <NavLink to={"/candidates"}>
+              <NavLink onClick={()=>setShowMenu(false)} to={"/candidates"}>
                 <li className="py-1">CANDIDATES</li>
                 <hr className="hidden w-3/5 h-1 m-auto bg-purple-700 border-none outline-none" />
               </NavLink>
-              <NavLink to={"/about"}>
+              <NavLink onClick={()=>setShowMenu(false)} to={"/about"}>
                 <li className="py-1">ABOUT</li>
                 <hr className="hidden w-3/5 h-1 m-auto bg-purple-700 border-none outline-none" />
               </NavLink>
-              <NavLink to={"/contact"}>
+              <NavLink onClick={()=>setShowMenu(false)} to={"/contact"}>
                 <li className="py-1">CONTACT</li>
                 <hr className="hidden w-3/5 h-1 m-auto bg-purple-700 border-none outline-none" />
               </NavLink>

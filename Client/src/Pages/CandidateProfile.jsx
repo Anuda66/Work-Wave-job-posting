@@ -27,7 +27,7 @@ function CandidateProfile() {
   
   return (
     <div>
-      
+      dfsdfsdf
     </div>
   )
 }

@@ -10,6 +10,7 @@ const AppContextProvider = (props) => {
   const [jobs, setJobs] = useState([])
   const [token, setToken] = useState(localStorage.getItem('token') ? localStorage.getItem('token') : false)
   const [userData, setUserData] = useState(false)
+  const [users, setUsers] = useState([])
 
   const getJobData = async()=>{
 
@@ -44,6 +45,22 @@ const AppContextProvider = (props) => {
     }
   }
 
+  const getUsers = async () => {
+    try{
+      const {data} = await axios.get(backendUrl + '')
+      if (data.success){
+        setUsers(data.users)
+      }
+      else{
+        toast.error(data.message)
+      }
+    }
+    catch(error){
+      console.log(error);
+      toast.error(error.message)
+    }
+  }
+
   const value = {
     jobs,
     token,setToken,
@@ -64,6 +81,10 @@ const AppContextProvider = (props) => {
       setUserData(false)
     }
   },[token])
+
+  useEffect(()=>{
+    getUsers()
+  },[])
 
   return (
     <AppContext.Provider value={value}>

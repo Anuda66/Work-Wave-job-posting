@@ -74,6 +74,7 @@ const loginUser = async (req, res)=>{
 }
 
 // API for get user profile data -------------------------------------
+
 const getProfile = async (req, res) =>{
     try{
         const {userId} = req.body
@@ -117,4 +118,17 @@ const updateProfile = async (req, res) => {
     }
 }
 
-export {registerUser, loginUser, getProfile, updateProfile}
+// API to get user datails ---------------------------------------
+
+const getUserDetails = async (req, res) => {
+    try{
+        const user = await userModel.find({}).select('-password')
+        res.json({success:true, user})
+    }
+    catch(error){
+        console.log(error);
+        res.json({success:false, message:error.message})
+    }
+}
+
+export {registerUser, loginUser, getProfile, updateProfile, getUserDetails}
