@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { AppContext } from "../Context/AppContext";
-import profileImage from "../assets/prof1.jpg";
 import RelatedJobs from "../Components/RelatedJobs";
 
 function ApplyToJob() {
