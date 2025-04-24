@@ -1,26 +1,26 @@
-import React, { useEffect } from 'react'
+import React, {useContext, useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom';
-import { users } from '../assets/assets';
-import { useState } from 'react';
+import {AppContext} from '../Context/AppContext'
 
 function candidates() {
 
   const { JobTitle } = useParams()
   const [filterUser, setFilterUser] = useState([])
+  const { user } = useContext(AppContext)
   const navigate = useNavigate();
 
   const applyFilter = () => {
     if (JobTitle) {
-      setFilterUser(users.filter(user => user.JobTitle === JobTitle))
+      setFilterUser(user.filter(user => user.jobTitle === JobTitle))
     }
     else {
-      setFilterUser(users)
+      setFilterUser(user)
     }
   }
 
   useEffect(() => {
     applyFilter()
-  }, [users, JobTitle])
+  }, [user, JobTitle])
 
   return (
 
@@ -42,7 +42,6 @@ function candidates() {
           <p onClick={() => JobTitle === 'Software Engineer' ? navigate('/candidates') : navigate('/candidates/Software Engineer')} className={`w-[94Vw] sm:w-auto pl-3 pr-3 py-1.5  border border-e-gray-300 rounded transition-all cursor-pointer text-md ${JobTitle === "Software Engineer" ? "bg-purple-300 text-black" : ""}`}>Software Engineer</p>
 
           <p onClick={() => JobTitle === 'QA Engineer' ? navigate('/candidates') : navigate('/candidates/QA Engineer')} className={`w-[94Vw] sm:w-auto pl-3 pr-3 py-1.5  border border-e-gray-300 rounded transition-all cursor-pointer text-md ${JobTitle === "QA Engineer" ? "bg-purple-300 text-black" : ""}`}>QA Engineer</p>
-
         </div>
 
         <div className='grid w-full gap-4 grid-cols-auto gap-y-6'>
@@ -54,9 +53,9 @@ function candidates() {
                   <p className='font-bold text-gray-500'>{item.name}</p>
                 </div>
                 <div className='flex flex-col gap-3'>
-                  <p className='text-lg font-bold text-gray-600'>{item.JobTitle}</p>
+                  <p className='text-lg font-bold text-gray-600'>{item.jobTitel}</p>
                   <p className='w-auto px-3 py-1 text-sm text-white bg-purple-400 rounded-full '>{item.skils}</p>
-                  <p className='text-sm text-gray-500'>{item.about}</p>
+                  {/*<p className='text-sm text-gray-500'>{item.about}</p>*/}
                   <p className='text-sm text-gray-500'>{item.email}</p>
 
                   <p className='w-auto text-sm text-gray-500'>{item.location}</p>

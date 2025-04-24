@@ -10,8 +10,6 @@ const userSchema = new mongoose.Schema({
     dob: {type:String, default:'Not Selected'},
     phone: {type:String, default:'0000000000'},
     jobTitel: {type:String, default:'Not Selected'},
-
-        
 })
 
 const userModel = mongoose.model.user || mongoose.model('user', userSchema)
