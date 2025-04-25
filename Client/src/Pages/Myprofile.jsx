@@ -46,12 +46,13 @@ function Myprofile() {
   }
   
   return userData && (
-    <div className="flex flex-col max-w-lg gap-2 p-10 text-sm border-2 shadow-xl bg-gray-50 rounded-2xl">
+    <div className="flex flex-col max-w-lg gap-2 p-3 text-sm border-2 shadow-xl bg-gray-50 rounded-2xl">
       
+      <div className="px-3 py-3 bg-purple-500 rounded-xl">
       {
         isEdit
         ? <label htmlFor="image">
-          <div className="relative inline-block cursor-pointer">
+          <div className="relative inline-block cursor-pointer ">
             <img className="rounded-full opacity-85 w-36 " src={image ? URL.createObjectURL(image) : userData.image} alt="profile image" />
             <img className="absolute w-10 bottom-12 right-12" src={image ? '' : profile} alt='' />
           </div>
@@ -60,7 +61,9 @@ function Myprofile() {
         </label>
         : <img className="rounded-full w-36" src={userData.image} alt="Profile Image"/>
       }
-
+      </div>
+      
+      <div className="gap-2 ">
       
       {isEdit ? (
         <input
@@ -178,6 +181,7 @@ function Myprofile() {
             Edit
           </button>
         )}
+      </div>
       </div>
     </div>
   );
