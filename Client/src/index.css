@@ -17,3 +17,20 @@
     @apply hidden;
 }
 
+@layer components {
+    .cv-section {
+      @apply mb-8 last:mb-0;
+    }
+    
+    .section-header {
+      @apply flex items-center gap-2 pb-2 mb-4 text-xl font-semibold text-blue-800 border-b-2 border-blue-100;
+    }
+  
+    .skill-tag {
+      @apply px-3 py-1 text-sm text-blue-800 transition-all bg-blue-100 rounded-full hover:bg-blue-200;
+    }
+  
+    .experience-item {
+      @apply pl-4 transition-colors border-l-4 border-blue-200 hover:border-blue-300;
+    }
+  }
