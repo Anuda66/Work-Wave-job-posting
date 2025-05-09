@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { AdminContext } from '../Context/AdminContext'
 import axios from 'axios'
 import { toast } from 'react-toastify'
-
+import { useNavigate } from 'react-router-dom'
 function Login() {
 
   const [state, setState] = useState('Admin')
@@ -12,6 +12,8 @@ function Login() {
   const [password, setPassword] = useState('')
 
   const {setAToken, backendUrl} = useContext(AdminContext)
+
+  const navigate = useNavigate()
 
   const onSubmitHandler = async(event) => {
 
@@ -53,7 +55,7 @@ function Login() {
           <input onChange={(e)=>setPassword(e.target.value)} value={password} className='w-full p-2 mt-1 text-sm text-gray-600 border border-gray-300 rounded-md' type="password" required/>
         </div>
 
-        <button className='w-full pt-2 pb-2 text-base text-white transition duration-300 ease-in-out delay-150 bg-purple-500 cursor-pointer rounded-2xl bg-primary hover:bg-purple-800 hover:shadow-lg hover:-translate-y-1 hover:scale-110'>Login</button>
+        <button onClick={()=> navigate('/admin-dashborad')} className='w-full pt-2 pb-2 text-base text-white transition duration-300 ease-in-out delay-150 bg-purple-500 cursor-pointer rounded-2xl bg-primary hover:bg-purple-800 hover:shadow-lg hover:-translate-y-1 hover:scale-110'>Login</button>
 
         {
           state === 'Admin'
