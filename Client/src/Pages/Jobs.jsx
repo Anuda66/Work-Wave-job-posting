@@ -25,7 +25,7 @@ function Jobs() {
   return (
     <div>
       <div className='flex flex-col justify-between my-10 md:flex-row'>
-        <p className='text-lg font-bold text-gray-600 '>Broude through the job category.</p>
+        <p className='text-lg font-bold text-gray-600 '>Find your jobs...</p>
         <button onClick={()=>navigate('/jobs')} className="px-8 py-3 mx-6 mt-6 font-light text-white transition duration-300 ease-in-out delay-150 bg-purple-500 rounded-full hover:-translate-y-1 hover:scale-110 hover:bg-purple-700 hover:shadow-lg md:mt-0">All Jobs</button>
       </div>
 

@@ -8,9 +8,9 @@ function SpacalityMeny() {
       className="flex flex-col items-center gap-4 py-16 text-gray-700 "
       id="speciality"
     >
-      <h1 className="text-3xl font-medium">Latest Job Openings</h1>
+      <h1 className="text-3xl font-medium">Jobs Categotys</h1>
       <p className="text-sm text-center sm:w-1/3">
-        Find your dream job & earn from world leading brands.
+        Simply browse through our extensive list of featured jobs.
       </p>
 
       <div className="flex w-full gap-4 pt-5 overflow-scroll sm:justify-center ">

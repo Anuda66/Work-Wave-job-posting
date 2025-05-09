@@ -9,8 +9,8 @@ function LatestJobs() {
 
   return (
     <div className='flex flex-col items-center gap-4 my-16 text-gray-800 md:mx-10'>
-     <h1 className='text-3xl font-medium'>Featured Jobs</h1>
-     <p className='text-sm text-center stext-sm '>Simply browse through our extensive list of featured jobs.</p>
+     <h1 className='text-3xl font-medium'>Latest Job Openings</h1>
+     <p className='text-sm text-center stext-sm '> Find your dream job & earn from world leading brands.</p>
      <div className='grid w-full gap-4 px-3 pt-5 grid-cols-auto gap-y-6 sm:px-0'>
         {
         jobs.slice(0,10).map((item,index)=>( 
