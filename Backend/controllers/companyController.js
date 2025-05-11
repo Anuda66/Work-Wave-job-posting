@@ -4,7 +4,7 @@ import jwt from "jsonwebtoken";
 import validator from "validator";
 import {v2 as cloudinary} from "cloudinary";
 
-// API for user register---------------------------
+// API for Company register---------------------------
 
 const registerCompany = async(req, res)=>{
     try{
