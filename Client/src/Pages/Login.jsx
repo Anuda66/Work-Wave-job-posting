@@ -57,10 +57,7 @@ function Login() {
         <p className="text-2xl font-semibold">
           {state === "Sing Up" ? "Create Account" : "Login"}
         </p>
-        <p>
-          Please {state === "Sing Up" ? "Create Account" : "Login"} to book
-          appointment
-        </p>
+        
         {state === "Sing Up" && (
           <div className="w-full">
             <p>Full Name</p>

@@ -6,7 +6,7 @@ import connectCloudinary from './config/cloudinary.js'
 import adminRouter from './routes/adminRoute.js'
 import jobRoute from './routes/jobRoute.js'
 import userRouter from './routes/userRoute.js'
-import companyRouter from './routes/companyRoute.js'
+
 
 //App config----------------------------------
 const app = express()
@@ -22,7 +22,7 @@ app.use(cors())
 app.use('/api/admin',adminRouter )
 app.use('/api/job', jobRoute)
 app.use('/api/user',userRouter)
-app.use('/api/company',companyRouter)
+
 
 // localhost:4000/api/admin/add-job
 

@@ -1,5 +1,5 @@
 import express from "express";
-import { registerCompany } from "../controllers/companyController";
+import { registerCompany } from "../controllers/companyController.js";
 import authCompany from "../middlewares/authCompany.js";
 import upload from "../middlewares/multer.js";
 

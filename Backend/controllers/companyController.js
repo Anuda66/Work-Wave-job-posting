@@ -1,4 +1,4 @@
-import companyModel from "../models/companyModel";
+import companyModel from "../models/companyModel.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import validator from "validator";
