@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { AdminContext } from "../Context/AdminContext";
 import { NavLink } from "react-router-dom";
-import { Bs1Square } from "react-icons/bs";
 import { MdSpaceDashboard } from "react-icons/md";
 import { IoBagAddSharp } from "react-icons/io5";
 import { FaWallet } from "react-icons/fa6";
