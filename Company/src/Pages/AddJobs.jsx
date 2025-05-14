@@ -1,12 +1,11 @@
 import React from 'react'
 
-
-function Dashboard() {
+function AddJobs() {
   return (
     <div>
-      Dshbord
+      cvsdvs
     </div>
   )
 }
 
-export default Dashboard
+export default AddJobs

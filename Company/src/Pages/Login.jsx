@@ -43,7 +43,7 @@ function Login() {
     };
     useEffect(()=>{
     if(Ctoken){
-      navigate('/')
+      navigate('/dashboard')
     }
   },[Ctoken])
 

@@ -1,12 +1,11 @@
 import React from 'react'
 
-
-function Dashboard() {
+function AllJobs() {
   return (
     <div>
-      Dshbord
+      All jobs
     </div>
   )
 }
 
-export default Dashboard
+export default AllJobs
