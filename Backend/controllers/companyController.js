@@ -1,5 +1,5 @@
 import companyModel from "../models/companyModel.js";
-import bcrypt from "bcrypt";
+import bcrypt from 'bcrypt';
 import jwt from "jsonwebtoken";
 import validator from "validator";
 import {v2 as cloudinary} from "cloudinary";
@@ -33,8 +33,8 @@ const registerCompany = async(req, res)=>{
         const newCompany = new companyModel(companyData)
         const company = await newCompany.save()
 
-        const token = jwt.sign({id:company._id}, process.env.JWT_SECRET)
-        res.json({success:true, token})
+        const Ctoken = jwt.sign({id:company._id}, process.env.JWT_SECRET)
+        res.json({success:true, Ctoken})
 
     }
     catch(error){
@@ -42,5 +42,8 @@ const registerCompany = async(req, res)=>{
         res.json({success:false, message:error.message})        
     }
 }
+
+// API for Company register---------------------------
+
     
 export {registerCompany}

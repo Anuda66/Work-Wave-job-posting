@@ -9,7 +9,8 @@
     phone: {type:String, default:'0000000000'},
     about: {type:String, default:'Not Selected'},
     website: {type:String, default:'Not Selected'},
- })
+ }, { minimize: false });
+
     const companyModel = mongoose.model.company || mongoose.model('company', companySchema)
 
     export default companyModel
