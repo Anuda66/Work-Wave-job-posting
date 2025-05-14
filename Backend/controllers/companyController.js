@@ -43,7 +43,33 @@ const registerCompany = async(req, res)=>{
     }
 }
 
-// API for Company register---------------------------
+// Api for user login-------------------------------------
+
+const companyLogin = async (req, res)=>{
+    try{
+
+        const {email, password} = req.body
+        const company = await companyModel.findOne({email})
+
+        if(!company){
+            return res.json({success:false, message:'Company does not exit'})
+        }
+
+        const isMatch = await bcrypt.compare(password, company.password)
+
+        if(isMatch){
+            const Ctoken = jwt.sign({id:company._id}, process.env.JWT_SECRET)
+            res.json({success:true,Ctoken})
+        }
+        else{
+            res.json({success:false,message:"Invalid credentials"})
+        }
+    }
+    catch(error){
+        console.log(error);
+        res.json({success:false, message:error.message})
+    }
+}
 
     
-export {registerCompany}
+export {registerCompany, companyLogin}
