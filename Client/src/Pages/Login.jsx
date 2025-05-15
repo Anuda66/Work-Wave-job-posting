@@ -3,6 +3,8 @@ import { AppContext } from "../Context/AppContext";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import Login1 from '../../../Company/src/Pages/Login.jsx'
 
 function Login() {
   
@@ -118,6 +120,9 @@ function Login() {
             </span>
           </p>
         )}
+        <Link className="w-full p-2 bg-green-400 rounded-lg hover:bg-gray-500 hover:shadow-lg hover:-translate-y-1 hover:scale-110"> 
+          <p className="text-base font-bold text-center text-white cursor-pointer ">Craete Company Account </p>
+        </Link>
       </div>
     </form>
   );

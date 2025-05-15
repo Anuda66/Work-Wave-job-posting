@@ -4,7 +4,6 @@ import jwt from 'jsonwebtoken'
 import validator from'validator'
 import userModel from '../models/userModel.js';
 
-
 // Api for adding Jobs from admin -----------------------
 
 const addJob = async (req, res) => {

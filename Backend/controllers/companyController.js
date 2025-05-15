@@ -2,7 +2,70 @@ import companyModel from "../models/companyModel.js";
 import bcrypt from 'bcrypt';
 import jwt from "jsonwebtoken";
 import validator from "validator";
-import {v2 as cloudinary} from "cloudinary";
+import jobModel from "../models/jobModel.js";
+import {v2 as cloudinary} from 'cloudinary'
+
+
+
+// Api for adding Jobs from Company Dashboard -----------------------
+
+const addJob = async (req, res) => {
+    try {
+      const {comName,  jobTitel, technology, discription, requirements, email, link} = req.body;
+      const imageFile = req.file;
+  
+      // Check if all required fields are present
+
+      if ( !comName || !jobTitel  || !technology || !discription || !requirements || !email || !link) {
+        return res.json({ success: false, message: "Missing data" });
+      }
+
+      //console.log({comName,  jobTitel, technology, discription, requirements, email, link},imageFile);
+      
+      if (!validator.isEmail(email)){
+        return res.json({ success: false, message: "Invalid emai" });
+      }
+  
+      // Check if a file was uploaded
+      if (!imageFile) {
+        return res.json({ success: false, message: "No file uploaded" });
+     }
+  
+      // Upload image to Cloudinary
+      const imageUploade = await cloudinary.uploader.upload(imageFile.path, {resource_type: 'image'});
+      const imageUrl = imageUploade.secure_url;
+  
+      // Add data to the database
+      const jobData = {
+        
+        comName,
+        jobTitel, 
+        technology,
+        discription,
+        requirements,
+        email,
+        link,
+        date: Date.now(),
+        image: imageUrl
+      };
+  
+      const newJob = new jobModel(jobData);
+      await newJob.save();
+  
+      res.json({ success: true, message: 'Job added' });
+    } 
+    
+    catch (error) {
+      console.log(error);
+      res.json({ success: false, message: error.message });
+    }
+  };
+
+
+
+
+
+
 
 // API for Company register---------------------------
 
@@ -72,4 +135,4 @@ const companyLogin = async (req, res)=>{
 }
 
     
-export {registerCompany, companyLogin}
+export {registerCompany, companyLogin, addJob}

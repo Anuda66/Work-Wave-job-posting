@@ -67,11 +67,13 @@ function AddJobs() {
       <div className="w-full max-w-4xl px-8 py-8 bg-white border rounded-xl max-h-[80vh] overflow-y-scroll border-gray-300 shadow-xl items-center justify-center">
         
         <div className="flex items-center gap-4 mb-8 text-gray-500">
+          
           <label htmlFor="job-img">
             <img className="w-16 cursor-pointer rounded-xl " src={proIma ? URL.createObjectURL(proIma) : profile} alt="Image" />
           </label>
           <input onChange={(e)=> setProImage(e.target.files[0])} type="file" id="job-img" hidden />
           <p>Uplode Profile <br/>Image</p>
+          
         </div>
 
         <div className="flex flex-col items-start gap-10 space-y-3 text-gray-600">
