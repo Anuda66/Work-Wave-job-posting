@@ -6,8 +6,7 @@ import { toast } from 'react-toastify'
 import axios from "axios";
 
 function AddJobs() {
-
-  const [proIma, setProImage] = useState(false)
+  const [proIma, setProImage] = useState(null)
   const [comName, setComName] = useState('')
   const [jobTitel, setJobTitel] = useState('Front-End Engineer')
   const [technology, setTechnology] = useState('')
@@ -19,15 +18,15 @@ function AddJobs() {
   const { backendUrl, Ctoken } = useContext(AppContext)
 
   const onSubmitHandler = async (event) => {
-    event.preventDefault() // can send data without refreshing page
+    event.preventDefault()
 
     try {
       if (!proIma) {
-        return toast.error('Image not selected')
+        toast.error('Image not selected')
+        return
       }
 
       const formData = new FormData()
-
       formData.append('image', proIma)
       formData.append('comName', comName)
       formData.append('jobTitel', jobTitel)
@@ -37,29 +36,37 @@ function AddJobs() {
       formData.append('email', email)
       formData.append('link', link)
       
-      formData.forEach((value,key)=>{
-        console.log(`${key} : ${value}`);
-      })
-      
-      //API call to back end ---------------------------
+      // For debugging
+      const formDataObj = {};
+      formData.forEach((value, key) => {
+        formDataObj[key] = value;
+      });
+      console.log('Form data:', formDataObj);
 
-      const {data} = await axios.post(backendUrl + '/api/company/add-job',formData, {headers: {Ctoken}})
+      const { data } = await axios.post(
+        backendUrl + '/api/company/add-job',
+        formData,
+        {
+          headers: {
+            Ctoken,
+            'Content-Type': 'multipart/form-data'
+          }
+        }
+      )
       
-      if (data.success){
+      if (data.success) {
         toast.success(data.message)
-      }
-      else{
+        // Optionally reset form here
+      } else {
         toast.error(data.message)
       }
-      
-    }
-    catch (error) {
-      
+    } catch (error) {
+      console.error('Error adding job:', error)
+      toast.error(error.response?.data?.message || 'Failed to add job')
     }
   }
-
   return (
-    <form className="w-full m-5 ">
+    <form onSubmit={onSubmitHandler} className="w-full m-5 ">
 
       <p className='mb-10 text-xl'>Add Jobs</p>
 
