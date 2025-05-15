@@ -4,8 +4,30 @@ import jwt from "jsonwebtoken";
 import validator from "validator";
 import jobModel from "../models/jobModel.js";
 import {v2 as cloudinary} from 'cloudinary'
+import userModel from "../models/userModel.js";
 
+ // API to get dashboard data for admin panel---------------------------------
 
+  const companyDashboard = async (req, res) =>{
+    try{
+      const jobs = await jobModel.find({})
+      const users = await userModel.find({})
+
+      const dashData = {
+        jobs : jobs.length,
+        users : users.length,
+        latstJobs : jobs.reverse().slice(0,5)
+      }
+
+      res.json({success:true, dashData})
+
+    }
+    catch(error){
+      console.log(error);
+      res.json({success:false, message:error.message, adminDashboard})
+      
+    }
+  }
 
 // Api for adding Jobs from Company Dashboard -----------------------
 
@@ -62,11 +84,6 @@ const addJob = async (req, res) => {
   };
 
 
-
-
-
-
-
 // API for Company register---------------------------
 
 const registerCompany = async(req, res)=>{
@@ -106,7 +123,7 @@ const registerCompany = async(req, res)=>{
     }
 }
 
-// Api for user login-------------------------------------
+// Api for company login-------------------------------------
 
 const companyLogin = async (req, res)=>{
     try{
@@ -135,4 +152,4 @@ const companyLogin = async (req, res)=>{
 }
 
     
-export {registerCompany, companyLogin, addJob}
+export {registerCompany, companyLogin, addJob, companyDashboard}
