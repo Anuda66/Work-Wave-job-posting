@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import { createContext, useEffect } from "react";
 import { useState } from "react";
 import axios from 'axios'
 import { toast } from "react-toastify";
@@ -32,28 +32,42 @@ const AppContextProvider = (props) => {
     }
 
     const getUserDetails = async () => {
-        try {
-            const { data } = await axios.get(backendUrl + '/api/company/user-details')
-            if (data.success) {
-                setUser(data.user)
+    if (!Ctoken) {
+        toast.error("Not authenticated");
+        return;
+    }
+    
+    try {
+        const { data } = await axios.get(backendUrl + '/api/company/user-details', {
+            headers: {
+                'Ctoken': Ctoken
             }
-            else {
-                toast.error(data.message)
-            }
+        });
+        if (data.success) {
+            setUser(data.user)
         }
-        catch (error) {
-            console.log(error);
-            toast.error(error.message)
+        else {
+            toast.error(data.message)
         }
     }
-
+    catch (error) {
+        console.log(error);
+        const errorMessage = error.response?.data?.message || error.message;
+        toast.error(errorMessage);
+    }
+}
 
     const value = {
         backendUrl,
         Ctoken, setCToken,
         dashData, getDashData,
-        user,getUserDetails,
-      }
+        user,setUser,
+        getUserDetails  
+    }
+
+    useEffect(() => {
+        getUserDetails()
+    }, [])
 
     return (
         <AppContext.Provider value={value}>
