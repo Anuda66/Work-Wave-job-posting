@@ -58,9 +58,9 @@ function AllUser() {
                 </div>
                 <div className='flex flex-col gap-3'>
                   <p className='text-lg font-bold text-gray-600'>{item.jobTitel}</p>
-                  {/*<p className='w-auto px-3 py-1 text-sm text-white bg-purple-400 rounded-full '>{item.skils}</p>*/}
+                  
                   <p className='w-auto px-3 py-1 text-sm text-white bg-purple-400 rounded-full '>.Net, Java, ReactJS</p>
-                  {/*<p className='text-sm text-gray-500'>{item.about}</p>*/}
+                  
                   <p className='text-sm text-gray-500'>Web developer and Python enthusiast, I thrive on problem-solving and interactive design. Self-learned in MERN stack development and enthusiastic to React Native</p>
                   <p className='text-sm font-bold text-gray-500'>{item.email}</p>
                   <p className='w-auto text-sm font-bold text-gray-500'>{item.location}</p>

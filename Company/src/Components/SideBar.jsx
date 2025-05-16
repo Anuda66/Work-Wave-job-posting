@@ -4,6 +4,10 @@ import { NavLink } from "react-router-dom";
 import { MdSpaceDashboard } from "react-icons/md";
 import { IoBagAddSharp } from "react-icons/io5";
 import { FaWallet } from "react-icons/fa6";
+import { ImUsers } from "react-icons/im";
+import { RiAddBoxFill } from "react-icons/ri";
+import { MdWorkHistory } from "react-icons/md";
+
 
 function SideBar() {
 //FaWallet
@@ -19,17 +23,17 @@ function SideBar() {
           </NavLink>
 
           <NavLink className={({isActive}) => `flex items-center gap-3 py-3.5 px-3 md:px-9 md:min-w-72 cursor-pointer ${isActive ? 'bg-purple-100 border-r-4 border-purple-600' : ''}`} to={'/addJobs'}>
-            <IoBagAddSharp className="text-xl text-gray-500"/>
+            <RiAddBoxFill  className="text-xl text-gray-500"/>
             <p>Add Job</p>
           </NavLink>
 
           <NavLink className={({isActive}) => `flex items-center gap-3 py-3.5 px-3 md:px-9 md:min-w-72 cursor-pointer ${isActive ? 'bg-purple-100 border-r-4 border-purple-600' : ''}`} to={'/allJobs'}>
-            <FaWallet className="text-xl text-gray-500"/>
+            <MdWorkHistory  className="text-xl text-gray-500"/>
             <p>All Job</p>
           </NavLink>
 
           <NavLink className={({isActive}) => `flex items-center gap-3 py-3.5 px-3 md:px-9 md:min-w-72 cursor-pointer ${isActive ? 'bg-purple-100 border-r-4 border-purple-600' : ''}`} to={'/allUser'}>
-            <FaWallet className="text-xl text-gray-500"/>
+            <ImUsers  className="text-xl text-gray-500"/>
             <p>Candidates</p>
           </NavLink>
         </ul>
