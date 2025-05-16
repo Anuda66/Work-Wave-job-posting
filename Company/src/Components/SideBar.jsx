@@ -27,6 +27,11 @@ function SideBar() {
             <FaWallet className="text-xl text-gray-500"/>
             <p>All Job</p>
           </NavLink>
+
+          <NavLink className={({isActive}) => `flex items-center gap-3 py-3.5 px-3 md:px-9 md:min-w-72 cursor-pointer ${isActive ? 'bg-purple-100 border-r-4 border-purple-600' : ''}`} to={'/allUser'}>
+            <FaWallet className="text-xl text-gray-500"/>
+            <p>Candidates</p>
+          </NavLink>
         </ul>
       )}
     </div>

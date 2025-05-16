@@ -8,6 +8,7 @@ import AddJobs from './Pages/AddJobs'
 import AllJobs from './Pages/AllJobs'
 import { AppContext } from './Context/AppContext'
 import { ToastContainer, toast } from 'react-toastify';
+import AllUser from "./Pages/AllUser";
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
           <Route path="/addJobs" element={<AddJobs />} />
           <Route path="/allJobs" element={<AllJobs />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/allUser" element={<AllUser />} />
         </Routes>
       </div>
     </div>
