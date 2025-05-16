@@ -88,7 +88,7 @@ const getProfile = async (req, res) =>{
     }
 }
 
-// API to update userfrofile ---------------------------------------
+// API to update user profile ---------------------------------------
 
 const updateProfile = async (req, res) => {
     try{

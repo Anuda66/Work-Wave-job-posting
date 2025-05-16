@@ -20,8 +20,8 @@ function App() {
       <div className="flex items-start">
         <SideBar />
         <Routes>
-          <Route path="/" element={<></>}/>
-          <Route path="/dashboard" element={<Dashboard />} />
+         
+          <Route path="/" element={<Dashboard />} />
           <Route path="/addJobs" element={<AddJobs />} />
           <Route path="/allJobs" element={<AllJobs />} />
           <Route path="/login" element={<Login />} />

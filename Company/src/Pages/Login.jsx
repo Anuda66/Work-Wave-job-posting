@@ -43,14 +43,14 @@ function Login() {
     };
     useEffect(()=>{
     if(Ctoken){
-      navigate('/dashboard')
+      navigate('/')
     }
   },[Ctoken])
 
     return (
         <form onSubmit={onSubmitHandler} className='min-h-[80vh] flex item-center'>
             <div className="flex flex-col items-center gap-3 p-8 m-auto min-w-[340px] sm:min-w-96 border border-gray-300 rounded-xl text-zinc-600 text-sm shadow-lg">
-                <p className="text-2xl font-semibold"> {state === "sing up" ? "Create Account" : "Company Login"} </p>
+                <p className="text-2xl font-semibold"> {state === "sing up" ? "Create Company Account  " : "Company Login"} </p>
                 {state === "sing up" && (
                     <div className="w-full">
                         <p>Full Name</p>
@@ -83,7 +83,7 @@ function Login() {
                         required
                     />
                 </div>
-                <button type="submit" className="w-full pt-2 pb-2 text-base text-white transition duration-300 ease-in-out delay-150 bg-purple-500 rounded-2xl bg-primary hover:bg-purple-800 hover:shadow-lg hover:-translate-y-1 hover:scale-110">
+                <button type="submit" className="w-full pt-2 pb-2 text-base text-white transition duration-300 ease-in-out delay-150 bg-purple-500 cursor-pointer rounded-2xl bg-primary hover:bg-purple-800 hover:shadow-lg hover:-translate-y-1 hover:scale-110">
                     {state === "sing up" ? "Create Account" : "Login"}
                 </button>
                 {state === "sing up" ? (

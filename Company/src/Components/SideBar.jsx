@@ -13,7 +13,7 @@ function SideBar() {
     <div className="min-h-screen bg-white birder-r">
       {Ctoken && (
         <ul className="mt-5 text-gray-700">
-          <NavLink className={({isActive}) => `flex items-center gap-3 py-3.5 px-3 md:px-9 md:min-w-72 cursor-pointer ${isActive ? 'bg-purple-100 border-r-4 border-purple-600' : ''}`} to={'/dashboard'}>
+          <NavLink className={({isActive}) => `flex items-center gap-3 py-3.5 px-3 md:px-9 md:min-w-72 cursor-pointer ${isActive ? 'bg-purple-100 border-r-4 border-purple-600' : ''}`} to={'/'}>
             <MdSpaceDashboard className="text-xl text-gray-500"/>
             <p>Dashboard</p>
           </NavLink>
