@@ -2,8 +2,6 @@ import React, { useContext } from "react";
 import { AppContext } from "../Context/AppContext";
 import { NavLink } from "react-router-dom";
 import { MdSpaceDashboard } from "react-icons/md";
-import { IoBagAddSharp } from "react-icons/io5";
-import { FaWallet } from "react-icons/fa6";
 import { ImUsers } from "react-icons/im";
 import { RiAddBoxFill } from "react-icons/ri";
 import { MdWorkHistory } from "react-icons/md";
@@ -11,9 +9,10 @@ import { MdWorkHistory } from "react-icons/md";
 
 function SideBar() {
 //FaWallet
-    const { Ctoken } = useContext(AppContext);
+  const { Ctoken } = useContext(AppContext);
     
   return (
+    
     <div className="min-h-screen bg-white birder-r">
       {Ctoken && (
         <ul className="mt-5 text-gray-700">

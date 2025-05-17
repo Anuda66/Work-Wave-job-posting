@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { AppContext } from '../Context/AppContext'
 
@@ -47,8 +47,6 @@ function MyJobs() {
             <div className='flex items-center justify-center w-full py-3 rounded-lg bg-slate-100'>
               <p className='font-bold text-red-600'>No matching jobs found</p>
             </div>
-            
-            
           )}
         </div>
       </div>

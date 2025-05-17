@@ -6,16 +6,21 @@ import jobModel from "../models/jobModel.js";
 import { v2 as cloudinary } from 'cloudinary'
 import userModel from "../models/userModel.js";
 
+// API for get company data -------------------------------------
+
+
+
+
 // API to get user datails ---------------------------------------
 
-const getUserDeatils = async(req, res) => {
+const getUserDeatils = async (req, res) => {
   try {
     const user = await userModel.find({}).select('-password')
-    res.json({success:true, user})
+    res.json({ success: true, user })
   }
-  catch(error){
+  catch (error) {
     console.log(error);
-    res.json({success:false, message:error.message})
+    res.json({ success: false, message: error.message })
   }
 }
 
@@ -165,4 +170,4 @@ const companyLogin = async (req, res) => {
 }
 
 
-export { registerCompany, companyLogin, addJob, companyDashboard, getUserDeatils }
+export { registerCompany, companyLogin, addJob, companyDashboard, getUserDeatils,  }
