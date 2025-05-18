@@ -93,7 +93,7 @@ function Nav() {
             </div>
           ) : (
             <button
-              onClick={() => navigate("/login")}
+              onClick={() => navigate("/Login")}
               className="hidden px-8 py-3 font-light transition duration-300 ease-in-out delay-150 bg-white rounded-full text-purple-700r md:block hover:-translate-y-1 hover:scale-110 hover:bg-purple-700 hover:shadow-lg hover:text-white"
             >
               Create Account
