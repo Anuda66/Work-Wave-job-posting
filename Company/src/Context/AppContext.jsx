@@ -12,6 +12,23 @@ const AppContextProvider = (props) => {
     const [Ctoken, setCToken] = useState(localStorage.getItem('Ctoken') ? localStorage.getItem('Ctoken') : false)
     const [dashData, setDashData] = useState(false)
     const [user, setUser] = useState([])
+    const [jobs, setJobs] = useState()
+
+    const getAllJobs = async () => {
+        try{
+            const {data} = await axios.post(backendUrl + '/api/company/jobList', {}, {headers:{Ctoken}})
+            if (data.success){
+                setJobs(data.jobs)
+                console.log(data.jobs );  
+            }
+            else{
+                toast.error(data.message)
+            }
+        }
+        catch (error){
+            toast.error(error.message)
+        }
+    }
 
     const getDashData = async () => {
         try {
@@ -62,7 +79,8 @@ const AppContextProvider = (props) => {
         Ctoken, setCToken,
         dashData, getDashData,
         user,setUser,
-        getUserDetails  
+        getUserDetails,
+        getAllJobs, jobs,setJobs
     }
 
     useEffect(() => {

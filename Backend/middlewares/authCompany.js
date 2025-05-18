@@ -10,7 +10,6 @@ const authCompany = async (req, res, next) => {
                 message: 'Not authorized, please login again' 
             });
         }
-
         // Verify token
         const token_decode = jwt.verify(Ctoken, process.env.JWT_SECRET);
         req.body.companyId = token_decode.id;
