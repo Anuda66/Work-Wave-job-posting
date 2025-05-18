@@ -25,7 +25,7 @@ function App() {
       <div > 
         <ToastContainer/>
         <Nav/>
-        <div className='mx-4 sm:mx-[10%]'>
+        <div className='mx-4 sm:mx-[5%]'>
         <Routes>
           <Route  path="/" element={<Home />} />
           <Route  path="/about" element={<About/>} />

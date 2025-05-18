@@ -35,6 +35,7 @@ function ApplyToJob() {
                 src={jobInfo.image}
                 alt="profile image"
               />
+
               <p className="text-xl text-gray-500">{jobInfo.comName}</p>
             </div>
 
@@ -58,8 +59,7 @@ function ApplyToJob() {
             <div className="flex items-center justify-center">
               <button
                 onClick={() => {
-                  navigate("");
-                  scrollTo(0, 0);
+                  navigate(jobInfo.link, "_blank"); 
                 }}
                 className="px-12 py-3 mt-10 font-light text-white transition duration-300 ease-in-out delay-150 bg-purple-500 rounded-full md:block hover:-translate-y-1 hover:scale-110 hover:bg-purple-700 hover:shadow-lg"
               >
@@ -69,7 +69,7 @@ function ApplyToJob() {
           </div>
         </div>
         {/*Rated Job section----------------------------------- */}
-        <RelatedJobs jobId={jobId} JobTitle={jobInfo.jobTitel}/>
+        <RelatedJobs jobId={jobId} JobTitle={jobInfo.jobTitel} />
       </div>
     )
   );
