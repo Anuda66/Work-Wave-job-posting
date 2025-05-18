@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import logo from '../assets/logo.png'
 import { useNavigate } from 'react-router-dom'
 import { AppContext } from "../Context/AppContext";
+import Prof from '../assets/Prof.png'
 
 function Navbar() {
     const { Ctoken, setCToken } = useContext(AppContext);
@@ -23,12 +24,17 @@ function Navbar() {
                     <img className="w-24 cursor-pointer" src={logo} alt="logo" />
                     <p className="border px-2.5 py-0.5 rounded-full border-white text-white">Company Dashboard</p>
                 </div>
-                <button
+                
+                <div className="flex items-center gap-4">
+                    <img className="w-10" src={Prof} alt="" />
+                    <button
                     onClick={logout}
                     className="px-10 py-2 font-light text-purple-600 transition duration-300 ease-in-out delay-150 bg-white rounded-full cursor-pointer md:block hover:-translate-y-1 hover:scale-110 hover:shadow-lg"
                 >
                     Logout
                 </button>
+                </div>
+                
             </div>
         </div>
     );
