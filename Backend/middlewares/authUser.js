@@ -1,21 +1,19 @@
-import jwt from 'jsonwebtoken'
+import jwt from 'jsonwebtoken';
 
-//admin authontication midleware--------------------------------
-
+// User authentication middleware
 const authUser = async (req, res, next) => {
-    try{
-        const {token} = req.headers
-        if (!token){
-            return res.json({success:false, message:'Not autheized loging agin'})
+    try {
+        const { token } = req.headers;
+        if (!token) {
+            return res.json({ success: false, message: 'Not authorized, please log in again' });
         }
-        const token_decode = jwt.verify(token,process.env.JWT_SECRET)
-        req.body.userId = token_decode.id
-        next() 
-    }
-    catch{
+        const token_decode = jwt.verify(token, process.env.JWT_SECRET);
+        req.body.userId = token_decode.id;
+        next();
+    } catch (error) {
         console.log(error);
-        res.json({success:false, message:error.message})
+        res.json({ success: false, message: error.message });
     }
-}
-export default authUser 
+};
 
+export default authUser;
