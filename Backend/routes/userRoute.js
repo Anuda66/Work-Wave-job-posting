@@ -13,5 +13,4 @@ UserRouter.post('/update-profile', upload.single('image'),authUser, updateProfil
 
 UserRouter.get('/get-usersDetails', getUserDetails)
 
-
-export default UserRouter
+export default UserRouter 

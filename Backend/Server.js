@@ -9,10 +9,6 @@ import userRouter from './routes/userRoute.js'
 import CompanyRouter from './routes/companyRoute.js'
 
 
-// mongodb+srv://anudaransara:fQ7kxTDwdu727cSh@cluster0.gosxe.mongodb.net
-//J0qvhLUmLMjcRaXo
-//mongodb+srv://anudaransara1:J0qvhLUmLMjcRaXo@cluster0.vynfxgx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
-
 //App config----------------------------------
 const app = express()
 const port = process.env.PORT || 4000

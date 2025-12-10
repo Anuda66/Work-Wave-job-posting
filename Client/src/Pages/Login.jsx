@@ -4,7 +4,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-import Login1 from '../../../Company/src/Pages/Login.jsx'
+
 
 function Login() {
   

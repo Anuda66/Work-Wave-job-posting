@@ -110,6 +110,7 @@ const companyLogin = async (req, res) => {
 }
 
 
+ 
 // Api for adding Jobs from Company Dashboard -----------------------
 
 const addJob = async (req, res) => {

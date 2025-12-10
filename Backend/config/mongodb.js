@@ -1,7 +1,3 @@
-//fQ7kxTDwdu727cSh
-//mongodb+srv://anudaransara:fQ7kxTDwdu727cSh@cluster0.gosxe.mongodb.net
-
-//npm run server
 
 import mongoose from "mongoose";
 
