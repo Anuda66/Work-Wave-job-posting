@@ -41,11 +41,11 @@ function Login() {
             toast.error(error.response?.data?.message || "Something went wrong")
         }
     };
-    useEffect(()=>{
-    if(Ctoken){
-      navigate('/')
-    }
-  },[Ctoken])
+    useEffect(() => {
+        if (Ctoken) {
+            navigate('/')
+        }
+    }, [Ctoken])
 
     return (
         <form onSubmit={onSubmitHandler} className='min-h-[80vh] flex item-center'>
@@ -82,6 +82,10 @@ function Login() {
                         value={password}
                         required
                     />
+                </div>
+                <div className='flex flex-col justify-center w-full p-2 mt-2 mb-2 text-sm text-center '>
+                    <p>flego@gmail.com</p>
+                    <p>Flego1234</p>
                 </div>
                 <button type="submit" className="w-full pt-2 pb-2 text-base text-white transition duration-300 ease-in-out delay-150 bg-purple-500 cursor-pointer rounded-2xl bg-primary hover:bg-purple-800 hover:shadow-lg hover:-translate-y-1 hover:scale-110">
                     {state === "sing up" ? "Create Account" : "Login"}
